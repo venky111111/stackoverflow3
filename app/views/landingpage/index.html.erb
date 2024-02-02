@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style> 
+  
 
 </style>
 </head>
@@ -68,6 +69,48 @@
     </div>
   </div>
 </nav>
+<section class="container" >
+   
+<div class="border mt-5 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 25% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
+  <div class="container mt-5 ">
+    <div class="row border border-info p-1">
+      <div class="col-sm-12 col-md-6 mb-3 d-flex">
+        <div id="dec_img-1">
+        <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;margin-top:100px ;" class="img-fluid border ">
+        </div>
+        <div class="card bg-dark mx-auto  mb-3" style="height: 250px;" id="card-1">
+          <div class="card-body" style="background-color: #f7d5b2; border-radius: 15px;">
+          <img src='<%= asset_path("loupe1).png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
+          <h5 class="card-text mt-3">Find the best answer to your technical question, help others answer theirs</h5>
+          <a href="#" type="button" class="btn text-white mt-2 " style="background-color:#eb711a;width:170px">Join the community</a><br>
+          <span class="mt-2 " style="font-size: small;">or <a href="#" class="text-dark">search content</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 mb-3 d-flex">
+        <div class="card bg-dark " style="height: 250px;" id="card-1">
+          <div class="card-body" style="background-color: #a8c3e0; border-radius: 15px;">
+          <img src='<%= asset_path("lock.png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
+          <h5 class="card-text mt-3">Want a secure, private space for your technical knowledge?</h5>
+          <a href="#" class="btn fw-bold text-white mt-2" style="background-color:#2874de;width:170px">Discover Teams</a>
+          </div>
+        </div>
+        <div id="dec_img-1">
+        <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;" class="img-fluid border border-warning">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <h1 class="fw-bold text-white">Every developer has a<br>tab open to Stack Overflow</h1>
+  </div>  
+</div>
+
+
+
+
+
+</section>
 <% if user_signed_in? %>
   <h1>Welcome Home, <%= current_user.email %> venkateshhhhhh</h1>
   <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete } %>
@@ -76,7 +119,19 @@
   
 <% end %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+    <style>
+      @media screen and (min-width: 1000px) {
+        #card-1 {
+          width: 55vmin;
+        }
+      }
+      @media screen and (max-width: 769px) {
+        #dec_img-1 {
+          display: none;
+        }
+      }
+     
+    </style>
 
 </body>
 </html>
