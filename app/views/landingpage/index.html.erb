@@ -84,6 +84,21 @@
            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
               
         }
+        #cards_3{
+           height: 350px;
+           width: 450px;
+       
+          position: absolute;
+          top: 140vmax;
+          left: 34vmax;
+          right: 0;
+        }
+        #cardanim:hover{
+          
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
        
     </style>
 </head>
@@ -182,7 +197,7 @@
   </nav>
 <section class="container" >
    
-<div class=" mt-5 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
+  <div class=" mt-5 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
   <div class="container mt-5 g-0">
     <div class="row border border-info p-1 g-0">
       <div class=" col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
@@ -332,14 +347,12 @@
   <div class="" style="height: 115px;width: 200px">
 
   </div>
-
-  
 </section>
-<section class="container">
-  <div class="bg-light mx-auto text-center" style="height: 360px;width: 1024px;padding: 96px 0 64px;" >
+<section class="container ">
+  <div class=" mx-auto text-center" style="height: 360px;width: 1024px;padding: 96px 0 64px;" >
     <p style="height: 25px; width: 1024px;font-size:19px;color: 636B74; margin: 0 0 19px;" id="text2" >Thousands of organizations around the globe use Stack Overflow for Teams</p>
     <div>
-      <div id="carouselExampleDark" class="carousel carousel-dark slide mt-5" data-bs-ride="carousel">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide mt-5 bg-white" data-bs-ride="carousel">
         
         <div class="carousel-inner">
           <div class="carousel-item active  " data-bs-interval="1000">
@@ -376,29 +389,239 @@
     </div>
   </div>
 </section>
-<section class="container">
-  
-    <div class="row row-cols-1 row-cols-md-3 g-0">
-  <div class="col">
-    <div class="card h-100">
-    <img src='<%= asset_path("illo-question.png") %>' style="width: 250px;height: 200px;" class="img-fluid rounded-start d-block ">
-      
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
- <img src='<%= asset_path("illo-home-search.png") %>' style="width: 250px;height: 200px;" class="img-fluid rounded-start d-block ">    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
- <img src='<%= asset_path("illo-for-you.png") %>' style="width: 250px;height: 200px;" class="img-fluid rounded-start d-block ">    
-    </div>
-  </div>
-
+<div class=" bg-danger rounded-start" style="height: 50px; width: 60px;">
 </div>
-  
-  <div class="text-center justify-content-center mx-auto" style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;">
+<div class=" bg-warning rounded-end" style="height: 50px; width: 60px;margin-left:59px ;">
+</div>
+<section class="container"> 
+  <div class="row row-cols-1 row-cols-md-3 g-0  mx-auto border border-dark d-flex" style="width: 70%;">
+    <div class="col">
+      <div class="card ">
+      <img src='<%= asset_path("illo-question.png") %>' style="width: 100%;height: 80%;" class="img-fluid rounded-start d-block ">
+      </div>
     </div>
+    <div class="col ">
+      <div class="card ">
+      <img src='<%= asset_path("illo-for-you.png") %>' style="width: 100%;height: 80%;margin-left:300px ;" class="img-fluid rounded-start d-block ">    
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" id="cards_3">
+      <img src='<%= asset_path("illo-home-search.png") %>'  class="img-fluid rounded-start d-block ">    
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-center justify-content-center mx-auto text-white " style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;">
+    <div class="border border-warning">
+        <img src='<%= asset_path("stack-overflow-teams2.png") %>'  class="img-fluid" style="width: 250px;margin: 0 0 32px;">  
+    </div>
+    <div  class=" mx-auto border" style="width:740px; height: 72px;font-size: 27px; margin: 0 72px 32px 0;">
+        <p id="text">Capture your company’s knowledge and context in a discoverable format to <span id="text" style="color:#E7700D;width:36px; height: 24px;font-size: 27px;">unblock your team</span></p>
+    </div>
+    <a href="#" type="button" class="btn text-white mt-2 fw-bold" id="text2" style="background-color:#1B75D0;width:210px;height: 43px; padding: 12px 32px;font-size: 15px;">Take a tour of Teams</a>
+
+    <div style="width: 1102px; height:265px; margin: -24px -24px 64px; padding: 64px 0 0;" class=" mx-auto border ">
+      <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 d-flex justify-content-around">
+        <div class="col">
+          <div class="card h-100  text-center bg-dark" >
+           <img src='<%= asset_path("check-mark.png") %>'  class="img-fluid mx-auto" style="width: 16px;height: 16px;"> 
+            <div class="card-body">
+              <h5 class="card-title" id="text">Increase productivity</h5>
+              <p class="card-text" id="text2" style="color:#a7adb4;font-size:17px">If somebody somewhere has the right answer, suddenly you have it too. Collaborate better in a remote-first world.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center bg-dark" >
+            <img src='<%= asset_path("check-mark.png") %>'  class="img-fluid mx-auto" style="width: 16px;height: 16px;"> 
+            <div class="card-body">
+              <h5 class="card-title" id="text">Accelerate time to market</h5>
+              <p class="card-text" id="text2"  style="color:#a7adb4;font-size:17px" >Shorten the time between initial idea and complete product. Take delays and misinformation out of the equation.</p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center bg-dark" >
+              <img src='<%= asset_path("check-mark.png") %>'  class="img-fluid mx-auto" style="width: 18px;height: 18px;"> 
+            <div class="card-body">
+              <h5 class="card-title" id="text">Protect institutional knowledge</h5>
+              <p class="card-text" id="text2"  style="color:#a7adb4;font-size:17px">People come and people go, but if you capture their contributions in one central place, that expertise sticks around.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center border">
+      <h2 id="text" class="mb-3">Ensure your company stays on course</h2>
+      <h5 id="text2">Here are just a few types of technologists that we help.</h5>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class=" mx-auto  p-0" style="width: 1100px; margin-top: 130px;">
+      <div class="row row-cols-1 row-cols-md-1 row-cols-lg-5 g-0 mt-5">
+        <div class="col">
+          <div class="card text-center  " id="cardanim1" onclick="cardfun1()" style="height:250px;width:100%;margin:0;background-color: #0C0D0E;">
+            <img src='<%= asset_path("rocket.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width:96px;height:96px;"> 
+            <div class="card-body">
+                <h3 class="card-title" id="text">DevOps engineers</h3>
+            </div>
+          </div>
+          <div class="card text-center  bg-dark" id="cardanim11" style="height:350px;width:100%;margin:0;background-color: #0C0D0E;display: none;">
+            <img src='<%= asset_path("rocket.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width:105px;height:96px;"> 
+            <div class="card-body">
+                <h3 class="card-title" id="text">DevOps engineers</h3>
+                <p id="text2">Shipping new products and features requires teamwork and coordination. Forget checklists and long docs no one ever reads.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center" id="cardanim2" onclick="cardfun2()" style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
+           <img src='<%= asset_path("network.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Data scientists</h3>
+            </div>
+          </div>
+          <div class="card text-center   bg-dark" id="cardanim22" style="height:350px;width:100%;margin: 0;background-color: #0C0D0E;display: none;">
+            <img src='<%= asset_path("network.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Data scientists</h3>
+              <p id="text2">Business decisions are better when backed by data. Give visibility to the data that support your strategies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center  "  id="cardanim3" onclick="cardfun3()" style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
+           <img src='<%= asset_path("development.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Softwared engineers</h3>
+            </div>
+          </div>
+          <div class="card text-center  bg-dark"  id="cardanim33" style="height:350px;width:100%;margin: 0;display: none;">
+           <img src='<%= asset_path("development.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Software engineers</h3>
+              <p id="text2">Help engineers be more efficient and streamline knowledge sharing using a tool they already love and trust.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center  " id="cardanim4" onclick="cardfun4()"  style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
+           <img src='<%= asset_path("headphones.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Support teams</h3>
+            </div>
+          </div>
+          <div class="card text-center  bg-dark" id="cardanim44"  style="height:350px;width:100%;margin: 0;background-color: #0C0D0E;display: none;">
+           <img src='<%= asset_path("headphones.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Support teams</h3>
+               <p id="text2">Level up your support by providing information to your customers using a natural interface: questions and answers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center  " id="cardanim5" onclick="cardfun5()" style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
+           <img src='<%= asset_path("group-chat.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Engineering leaders</h3>
+            </div>
+          </div>
+          <div class="card text-center bg-dark " id="cardanim55" style="height:350px;width:100%;margin: 0;display: none;">
+           <img src='<%= asset_path("group-chat.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 110px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Engineering leaders</h3>
+              <p id="text2">Help your team get the information they need to do their job - reduce burnout and help engineers grow and learn together.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function cardfun1(){
+          document.getElementById("cardanim1").style.display="none";
+          document.getElementById("cardanim11").style.display="block";
+           document.getElementById("cardanim2").style.display="block";
+          document.getElementById("cardanim22").style.display="none";
+          document.getElementById("cardanim3").style.display="block";
+          document.getElementById("cardanim33").style.display="none";
+           document.getElementById("cardanim4").style.display="block";
+          document.getElementById("cardanim44").style.display="none";
+          document.getElementById("cardanim5").style.display="block";
+          document.getElementById("cardanim55").style.display="none";
+        }
+        function cardfun2(){
+          document.getElementById("cardanim1").style.display="block";
+          document.getElementById("cardanim11").style.display="none";
+          document.getElementById("cardanim2").style.display="none";
+          document.getElementById("cardanim22").style.display="block";
+          document.getElementById("cardanim3").style.display="block";
+          document.getElementById("cardanim33").style.display="none";
+           document.getElementById("cardanim4").style.display="block";
+          document.getElementById("cardanim44").style.display="none";
+          document.getElementById("cardanim5").style.display="block";
+          document.getElementById("cardanim55").style.display="none";
+        }
+         function cardfun3(){
+          document.getElementById("cardanim1").style.display="block";
+          document.getElementById("cardanim11").style.display="none";
+          document.getElementById("cardanim2").style.display="block";
+          document.getElementById("cardanim22").style.display="none";
+          document.getElementById("cardanim3").style.display="none";
+          document.getElementById("cardanim33").style.display="block";
+           document.getElementById("cardanim4").style.display="block";
+          document.getElementById("cardanim44").style.display="none";
+          document.getElementById("cardanim5").style.display="block";
+          document.getElementById("cardanim55").style.display="none";
+
+        }
+         function cardfun4(){
+          document.getElementById("cardanim1").style.display="block";
+          document.getElementById("cardanim11").style.display="none";
+          document.getElementById("cardanim2").style.display="block";
+          document.getElementById("cardanim22").style.display="none";
+          document.getElementById("cardanim3").style.display="block";
+          document.getElementById("cardanim33").style.display="none";
+          document.getElementById("cardanim4").style.display="none";
+          document.getElementById("cardanim44").style.display="block";
+          document.getElementById("cardanim5").style.display="block";
+          document.getElementById("cardanim55").style.display="none";
+        }
+        function cardfun5(){
+          document.getElementById("cardanim1").style.display="block";
+          document.getElementById("cardanim11").style.display="none";
+          document.getElementById("cardanim2").style.display="block";
+          document.getElementById("cardanim22").style.display="none";
+          document.getElementById("cardanim3").style.display="block";
+          document.getElementById("cardanim33").style.display="none";
+          document.getElementById("cardanim4").style.display="block";
+          document.getElementById("cardanim44").style.display="none";
+           document.getElementById("cardanim5").style.display="none";
+          document.getElementById("cardanim55").style.display="block";
+
+        }
+    </script>
+
+    
+
+   
 </section>
 <% if user_signed_in? %>
   <h1>Welcome Home, <%= current_user.email %> venkateshhhhhh</h1>
