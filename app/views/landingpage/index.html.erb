@@ -95,8 +95,8 @@
         }
         #cardanim:hover{
           
-          -ms-transform: scale(1.5); /* IE 9 */
-          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          -ms-transform: scale(1.5); 
+          -webkit-transform: scale(1.5); 
           transform: scale(1.5); 
         }
        
@@ -412,16 +412,16 @@
     </div>
   </div>
   
-  <div class="text-center justify-content-center mx-auto text-white " style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;">
-    <div class="border border-warning">
+  <div class="text-center  mx-auto text-white " style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;border-radius: 20px;">
+    <div>
         <img src='<%= asset_path("stack-overflow-teams2.png") %>'  class="img-fluid" style="width: 250px;margin: 0 0 32px;">  
     </div>
-    <div  class=" mx-auto border" style="width:740px; height: 72px;font-size: 27px; margin: 0 72px 32px 0;">
+    <div  class=" mx-auto " style="width:740px; height: 72px;font-size: 27px; margin: 0 72px 32px 0;">
         <p id="text">Capture your company’s knowledge and context in a discoverable format to <span id="text" style="color:#E7700D;width:36px; height: 24px;font-size: 27px;">unblock your team</span></p>
     </div>
-    <a href="#" type="button" class="btn text-white mt-2 fw-bold" id="text2" style="background-color:#1B75D0;width:210px;height: 43px; padding: 12px 32px;font-size: 15px;">Take a tour of Teams</a>
+      <a href="#" type="button" class="btn text-white mt-2 fw-bold" id="text2" style="background-color:#1B75D0;width:210px;height: 43px; padding: 12px 32px;font-size: 15px;">Take a tour of Teams</a>
 
-    <div style="width: 1102px; height:265px; margin: -24px -24px 64px; padding: 64px 0 0;" class=" mx-auto border ">
+    <div style="width: 1102px; height:265px; margin: -24px -24px 64px; padding: 64px 0 0;" class=" mx-auto border border-info ">
       <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 d-flex justify-content-around">
         <div class="col">
           <div class="card h-100  text-center bg-dark" >
@@ -460,31 +460,18 @@
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class=" mx-auto  p-0" style="width: 1100px; margin-top: 130px;">
-      <div class="row row-cols-1 row-cols-md-1 row-cols-lg-5 g-0 mt-5">
-        <div class="col">
-          <div class="card text-center  " id="cardanim1" onclick="cardfun1()" style="height:250px;width:100%;margin:0;background-color: #0C0D0E;">
+    <div class="border border-danger">
+      <div class="row row-cols-1 row-cols-md-1 row-cols-lg-5 g-0 mx-auto  align-items-center d-flex justify-content-evenly" style="width: 1150px;height: 500px;">
+        <div class="col mt-5" style="height:256px;width:165px;margin: 0px;" id="cardanim1">
+          <div class="card text-center"  onclick="cardfun1()" style="background-color: #0C0D0E;">
             <img src='<%= asset_path("rocket.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width:96px;height:96px;"> 
             <div class="card-body">
                 <h3 class="card-title" id="text">DevOps engineers</h3>
             </div>
-          </div>
-          <div class="card text-center  bg-dark" id="cardanim11" style="height:350px;width:100%;margin:0;background-color: #0C0D0E;display: none;">
+          </div> 
+        </div>
+        <div class="col mt-5" style="height:300px;width:300px;margin: 0px;display: none;" id="cardanim11" >
+          <div class="card text-center bg-dark" >
             <img src='<%= asset_path("rocket.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width:105px;height:96px;"> 
             <div class="card-body">
                 <h3 class="card-title" id="text">DevOps engineers</h3>
@@ -492,29 +479,33 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card text-center" id="cardanim2" onclick="cardfun2()" style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
-           <img src='<%= asset_path("network.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+        <div class="col mt-5" style="height:256px;width:165px;margin: 0px;" id="cardanim2">
+          <div class="card text-center "  onclick="cardfun2()" style="background-color: #0C0D0E;">
+           <img src='<%= asset_path("network22.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width:96px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Data scientists</h3>
-            </div>
-          </div>
-          <div class="card text-center   bg-dark" id="cardanim22" style="height:350px;width:100%;margin: 0;background-color: #0C0D0E;display: none;">
-            <img src='<%= asset_path("network.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
-            <div class="card-body">
-              <h3 class="card-title" id="text" >Data scientists</h3>
-              <p id="text2">Business decisions are better when backed by data. Give visibility to the data that support your strategies.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card text-center  "  id="cardanim3" onclick="cardfun3()" style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
-           <img src='<%= asset_path("development.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+        <div class="col mt-5" style="height:300px;width:300px;display: none;" id="cardanim22" >
+          <div class="card text-center  bg-dark">
+            <img src='<%= asset_path("network.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width: 105px; height: 96px;"> 
             <div class="card-body">
-              <h3 class="card-title" id="text" >Softwared engineers</h3>
+                <h3 class="card-title" id="text">Data scientists</h3>
+                <p id="text2">Business decisions are better when backed by data. Give visibility to the data that support your strategies.</p>
             </div>
           </div>
-          <div class="card text-center  bg-dark"  id="cardanim33" style="height:350px;width:100%;margin: 0;display: none;">
+        </div>
+        <div class="col mt-5" style="height:256px;width:165px;margin: 0px;display: none;"  id="cardanim3">
+          <div class="card text-center  "  onclick="cardfun3()" style="background-color: #0C0D0E;">
+           <img src='<%= asset_path("software.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
+            <div class="card-body">
+              <h3 class="card-title" id="text" >Software engineers</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-5" style="height:300px;width:300px;margin: 0px;" id="cardanim33">
+          <div class="card text-center  bg-dark"  >
            <img src='<%= asset_path("development.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Software engineers</h3>
@@ -522,30 +513,34 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card text-center  " id="cardanim4" onclick="cardfun4()"  style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
+        <div class="col mt-5" style="height:256px;width:165px;margin: 0px;" id="cardanim4">
+          <div class="card text-center "  onclick="cardfun4()"  style="background-color:#0C0D0E;">
            <img src='<%= asset_path("headphones.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Support teams</h3>
             </div>
           </div>
-          <div class="card text-center  bg-dark" id="cardanim44"  style="height:350px;width:100%;margin: 0;background-color: #0C0D0E;display: none;">
-           <img src='<%= asset_path("headphones.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
+        </div>
+        <div class="col mt-5" style="height:300px;width:300px;margin: 0px; display: none;" id="cardanim44">
+          <div class="card text-center  bg-dark"  >
+           <img src='<%= asset_path("headphone.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Support teams</h3>
                <p id="text2">Level up your support by providing information to your customers using a natural interface: questions and answers.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card text-center  " id="cardanim5" onclick="cardfun5()" style="height:250px;width:100%;margin: 0;background-color: #0C0D0E;">
+        <div class="col mt-5" style="height:256px;width:165px;margin: 0px; " id="cardanim5">
+          <div class="card text-center "  onclick="cardfun5()" style="background-color: #0C0D0E;">
            <img src='<%= asset_path("group-chat.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
             <div class="card-body">
-              <h3 class="card-title" id="text" >Engineering leaders</h3>
+              <h3 class="card-title" id="text" >Engineeringleaders</h3>
             </div>
           </div>
-          <div class="card text-center bg-dark " id="cardanim55" style="height:350px;width:100%;margin: 0;display: none;">
-           <img src='<%= asset_path("group-chat.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 110px;height: 96px;"> 
+        </div>
+        <div class="col mt-5" style="height:300px;width:300px;margin: 0px;display: none;" id="cardanim55">
+          <div class="card text-center  bg-dark"  style="">
+           <img src='<%= asset_path("management.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Engineering leaders</h3>
               <p id="text2">Help your team get the information they need to do their job - reduce burnout and help engineers grow and learn together.</p>
@@ -557,8 +552,13 @@
     <script>
         function cardfun1(){
           document.getElementById("cardanim1").style.display="none";
-          document.getElementById("cardanim11").style.display="block";
+          let cardElement = document.getElementById("cardanim11");
+          cardElement.style.display="block";
+          cardElement.style.msTransform = 'scale(1.1)';
+          cardElement.style.webkitTransform = 'scale(1.1)';
+          cardElement.style.transform = 'scale(1.2)';
            document.getElementById("cardanim2").style.display="block";
+           
           document.getElementById("cardanim22").style.display="none";
           document.getElementById("cardanim3").style.display="block";
           document.getElementById("cardanim33").style.display="none";
@@ -571,8 +571,14 @@
           document.getElementById("cardanim1").style.display="block";
           document.getElementById("cardanim11").style.display="none";
           document.getElementById("cardanim2").style.display="none";
-          document.getElementById("cardanim22").style.display="block";
+          let cardElement = document.getElementById("cardanim22");
+          cardElement.style.display="block";
+          cardElement.style.msTransform = 'scale(1.1)';
+          cardElement.style.webkitTransform = 'scale(1.1)';
+          cardElement.style.transform = 'scale(1.2)';
           document.getElementById("cardanim3").style.display="block";
+          
+          
           document.getElementById("cardanim33").style.display="none";
            document.getElementById("cardanim4").style.display="block";
           document.getElementById("cardanim44").style.display="none";
@@ -585,8 +591,13 @@
           document.getElementById("cardanim2").style.display="block";
           document.getElementById("cardanim22").style.display="none";
           document.getElementById("cardanim3").style.display="none";
-          document.getElementById("cardanim33").style.display="block";
+          let cardElement = document.getElementById("cardanim33");
+          cardElement.style.display="block";
+          cardElement.style.msTransform = 'scale(1.2)';
+          cardElement.style.webkitTransform = 'scale(1.2)';
+          cardElement.style.transform = 'scale(1.2)';
            document.getElementById("cardanim4").style.display="block";
+           
           document.getElementById("cardanim44").style.display="none";
           document.getElementById("cardanim5").style.display="block";
           document.getElementById("cardanim55").style.display="none";
@@ -600,8 +611,13 @@
           document.getElementById("cardanim3").style.display="block";
           document.getElementById("cardanim33").style.display="none";
           document.getElementById("cardanim4").style.display="none";
-          document.getElementById("cardanim44").style.display="block";
+          let cardElement = document.getElementById("cardanim44");
+          cardElement.style.display="block";
+          cardElement.style.msTransform = 'scale(1.1)';
+          cardElement.style.webkitTransform = 'scale(1.1)';
+          cardElement.style.transform = 'scale(1.2)';
           document.getElementById("cardanim5").style.display="block";
+        
           document.getElementById("cardanim55").style.display="none";
         }
         function cardfun5(){
@@ -613,16 +629,360 @@
           document.getElementById("cardanim33").style.display="none";
           document.getElementById("cardanim4").style.display="block";
           document.getElementById("cardanim44").style.display="none";
-           document.getElementById("cardanim5").style.display="none";
-          document.getElementById("cardanim55").style.display="block";
+          document.getElementById("cardanim5").style.display="none";
+          let cardElement = document.getElementById("cardanim55");
+          cardElement.style.display="block";
+          cardElement.style.msTransform = 'scale(1.1)';
+          cardElement.style.webkitTransform = 'scale(1.1)';
+          cardElement.style.transform = 'scale(1.2)';
 
         }
     </script>
 
-    
 
-   
+  <div>
+    <style>
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 25px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 19px;
+          left: 2px;
+          bottom: 2px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: darkgreen;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px red;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+
+      
+        .slider.round {
+          border-radius: 34px;
+        }
+
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        </style>
+
+      <div class="d-flex container" style="margin:0 10px 20px;">
+        <p id="text2" style="font-size: 15px;" class="me-2">Annual billing dicount</p>
+
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider round" ></span>
+        </label>
+      </div>
+
+    <%# four cards container start in 6th component %>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-1">
+          <div class="col">
+            <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+              <div class="card-top">
+                <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #e7700d;height: 30px;width: 47px;" class="rounded">Free</h2>
+              </div>
+              <div class="card-body border text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
+                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">Free</p>
+                  <p style="color:#a7adb4;font-size:15px" id="text2">No credit card required</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("loudspeaker.png") %>'  class="img-fluid " style="width: 20px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">ChatOps integrations - Slack & Microsoft Teams</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                  <img src='<%= asset_path("locker.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Your own private space hosted on stackoverflowteams.com</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("box.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                  <p class="text2" style="font-size: 15px;">Structured and searchable knowledge base</p>
+                </div>
+
+                <div style="margin:100px 0 0" class="text-center">
+                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e7700d;" id="text2" class="fw-bold rounded text-decoration-none text-white">create a free team</a>
+                </div>
+
+                  <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
+              </div>   
+            </div>
+          </div>
+          <div class="col">
+             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+              <div class="card-top">
+                <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #c8ccd0;height: 30px;width: 55px;" class="rounded text-dark">Basic</h2>
+              </div>
+              <div class="card-body border text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
+                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">$6.50 USD</p>
+                  <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
+                </div>
+                 <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("key.png") %>'  class="img-fluid " style="width: 20px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Single sign-on (SSO) with SAML + Okta integration</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("loudspeaker.png") %>'  class="img-fluid" style="width: 20px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">ChatOps integrations - Slack & Microsoft Teams</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                  <img src='<%= asset_path("locker.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Your own private space hosted on stackoverflowteams.com</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("box.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                  <p class="text2" style="font-size: 15px;">Structured and searchable knowledge base</p>
+                </div>
+
+                <div style="margin:40px 0 0" class="text-center">
+                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e3e6e8;color:#0C3B6A;" id="text2" class="fw-bold rounded text-decoration-none ">Get started</a>
+                </div>
+
+                  <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Up to 250 teammates</p>
+              </div>   
+            </div>
+          </div>
+          <div class="col">
+             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+              <div class="card-top">
+                <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #3b4045;height: 30px;width: 90px;" class="rounded">Business</h2>
+              </div>
+              <div class="card-body border text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
+                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">$13.50 USD</p>
+                  <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 15px 0 0;">
+                    <img src='<%= asset_path("plus-sign.png") %>'  class="img-fluid " style="width: 21px;height: 21px;"> 
+                  </div>
+                    
+                    <p style="color:#a7adb4;font-size:15px" id="text2" class="">All the features of Basic plus…</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("dictionary.png") %>'  class="img-fluid " style="width: 20px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Long-form knowledge with Articles</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                  <img src='<%= asset_path("chain.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Additional integrations — ChatOps, Jira, GitHub & Okta</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("food-container.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                  <p class="text2" style="font-size: 15px;">Group content together into Collections</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("statistics.png") %>'  class="img-fluid " style="width: 20px;height: 20px;"> 
+                  </div>
+                  <p class="text2" style="font-size: 15px;"  class="mt-2 border border-dark">Usage and adoption metrics  Collections</p>
+                </div>
+                
+
+                <div style="margin:0 0 0" class="text-center">
+                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e7700d;" id="text2" class="fw-bold rounded text-decoration-none text-white">create a free team</a>
+                </div>
+
+                  <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
+              </div>   
+            </div>
+          </div>
+          <div class="col">
+             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+              <div class="card-top">
+                <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #2b2d6e;height: 30px;width: 90px;" class="rounded">Enterprise</h2>
+              </div>
+              <div class="card-body border text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
+                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">Custom pricing</p>
+                  <p style="color:#a7adb4;font-size:15px" id="text2">Let’s talk about what you need</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 15px 0 0;">
+                    <img src='<%= asset_path("plus-sign.png") %>'  class="img-fluid " style="width: 21px;height: 21px;"> 
+                  </div>
+                    
+                    <p style="font-size:15px" id="text2" class="mt-2 pt-1">Premium features of Business</p>
+                </div>
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("group.png") %>'  class="img-fluid " style="width: 20px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Unlimited Teams within your instance</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                  <img src='<%= asset_path("mountains.png") %>'  class="img-fluid" style="width: 22px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Flexible hosting options — cloud or on-premises</p>
+                </div>
+
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("chevrons.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                  <p class="text2" style="font-size: 15px;">Robust read and write API</p>
+                </div>
+
+                <div style="margin:0 0px" class="text-center">
+                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e7700d;" id="text2" class="fw-bold rounded text-decoration-none text-white">create a free team</a>
+                </div>
+
+                  <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
+              </div>   
+            </div>
+          </div>
+        </div>
+      </div>
+      <%# four cards container end in 6th component %>
+
+      <%# four cards container start in 6th component %>
+
+
+    <div style="margin-top:100px;width:1200px;" class="container border border-warning">
+      <div class="row row-cols-1 row-cols-md-4 g-2 " >
+        <div class="col">
+          <div class="card border" style="background-color:#0C0D0E;">
+           
+            <div class="card-body" style="padding:24px">
+             
+              <p class="card-text" id="text2" style="font-size:17px;">A Forrester Consulting study shows <strong id="text" class="text-primary">191% return on investment</strong> with Stack Overflow for Teams.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border" style="background-color:#0C0D0E;">
+           
+            <div class="card-body" style="padding:24px">
+             
+              <p class="card-text" id="text2" style="font-size:17px;">The world’s largest telecom firm <strong id="text" class="text-primary">saved $10M</strong> in deflected support cases with our centralized knowledge base.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border" style="background-color:#0C0D0E;">
+           
+            <div class="card-body" style="padding:24px">
+             
+              <p class="card-text" id="text2" style="font-size:17px;">Subject-matter experts at software platform Unqork had <strong id="text" class="text-primary">27% more time</strong> to work on projects after using Teams.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border" style="background-color:#0C0D0E;">
+           
+            <div class="card-body" style="padding:20px">
+             
+              <p class="card-text" id="text2" style="font-size:17px;">you can save time and money with stackOverflow for teams</p><br>
+              <a href="#" style="border-radius: 2px;border: 2px solid #1b75d0;padding: 12px 32px;font-size: 15px;" id="text2" class="text-primary fw-bold rounded text-decoration-none">Calulate your ROI</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    <%# four cards container end in 6th component %>
+
+    <%# sixth sub component in 6th component start %>
+    <div style="height:480px;width: 1290px; " class="border border-danger mt-5 mx-auto">
+      <div class="row row-cols-1 row-cols-md-3 g-0" style="width:100%">
+        <div class="col" style="width:25%">
+          <div class="card">
+             <img src='<%= asset_path("illo-integrations-left.png") %>'  class="img-fluid  bg-dark" style=""> 
+          
+          </div>
+        </div>
+        <div class="col" style="width:50%">
+          <div class="card">
+           
+            <div class="card-body bg-dark">
+              <h2 class="card-title" id="text">Integrates with and improves other tools</h2>
+              <p class="card-text" id="text2" class="fw-bold" style="font-size:19px;color:#babfc5;margin:0 0 32px;">All plans come with integrations for ChatOps tools Slack & Microsoft Teams in order to cut down on pings, limit distractions and make the tools even more powerful. Business and Enterprise customers get access to Jira, GitHub & Okta integrations.</p>
+              <div>
+                edfef
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="width:25%">
+          <div class="card">
+             <img src='<%= asset_path("illo-integrations-right.png") %>'  class="img-fluid  bg-dark"> 
+          </div>
+        </div>
+  
+        </div>
+    </div>
+    <%# sixth sub component in 6th component end %>
+
+  </div>
 </section>
+
+
 <% if user_signed_in? %>
   <h1>Welcome Home, <%= current_user.email %> venkateshhhhhh</h1>
   <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete } %>
