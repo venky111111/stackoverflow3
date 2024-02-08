@@ -99,10 +99,26 @@
           -webkit-transform: scale(1.5); 
           transform: scale(1.5); 
         }
+
+        .animated {
+        transform: scale(1);
+        }
+       #ninbut:hover{
+          background-color: lightgrey;
+       }
+       #ninecard{
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       }
+       #ninecard:hover{
+         
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+       }
+
        
     </style>
 </head>
 <body>
+   <%# navbar component on landing page is start %>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size:small;">
   		<div class="container">
 
@@ -195,161 +211,164 @@
       </div>
     </div>
   </nav>
-<section class="container" >
-   
-  <div class=" mt-5 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
-  <div class="container mt-5 g-0">
-    <div class="row border border-info p-1 g-0">
-      <div class=" col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
-        <div id="dec_img-1">
-        <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;margin-top:100px ;" class="img-fluid border ">
-        </div>
-        <div class="card bg-dark mx-auto  mb-3" style="height: 250px;" id="card-1">
-          <div class="card-body" style="background-color: #f7d5b2; border-radius: 15px;">
-          <img src='<%= asset_path("loupe1).png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
-          <h5 class="card-text mt-3">Find the best answer to your technical question, help others answer theirs</h5>
-          <a href="#" type="button" class="btn text-white mt-2 fw-bold"  id="text2" style="background-color:#E7700D;padding: 12px 32px;font-size: 15px;">Join the community</a><br>
-          <span class="mt-2 " style="font-size: small;">or <a href="#" class="text-dark">search content</a></span>
+  <%# navbar component on landing page is end %>
+  <%# second and third components on landing page is start%>
+  <section class="container" >
+    <%# second component on landing page is start %>
+    <div class=" mt-5 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
+      <div class="container mt-5 g-0">
+        <div class="row  p-1 g-0">
+          <div class=" col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
+            <div id="dec_img-1">
+            <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;margin-top:100px ;" class="img-fluid  ">
+            </div>
+            <div class="card bg-dark mx-auto  mb-3" style="height: 250px;" id="card-1">
+              <div class="card-body" style="background-color: #f7d5b2; border-radius: 15px;">
+              <img src='<%= asset_path("loupe1).png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
+              <h5 class="card-text mt-3">Find the best answer to your technical question, help others answer theirs</h5>
+              <a href="#" type="button" class="btn text-white mt-2 fw-bold"  id="text2" style="background-color:#E7700D;padding: 12px 32px;font-size: 15px;">Join the community</a><br>
+              <span class="mt-2 " style="font-size: small;">or <a href="#" class="text-dark">search content</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
+            <div class="card bg-dark " style="height: 250px;" id="card-1">
+              <div class="card-body" style="background-color: #a8c3e0; border-radius: 15px;">
+              <img src='<%= asset_path("lock.png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
+              <h5 class="card-text mt-3">Want a secure, private space for your technical knowledge?</h5>
+              <a href="#" type="button" class="btn text-white mt-2 fw-bold" id="text2" style="background-color:#1B75D0;width:210px;height: 43px; padding: 12px 32px;font-size: 15px;">Discover Teams</a>
+              </div>
+            </div>
+            <div id="dec_img-1">
+            <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;" class="img-fluid ">
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
-        <div class="card bg-dark " style="height: 250px;" id="card-1">
-          <div class="card-body" style="background-color: #a8c3e0; border-radius: 15px;">
-          <img src='<%= asset_path("lock.png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
-          <h5 class="card-text mt-3">Want a secure, private space for your technical knowledge?</h5>
-          <a href="#" type="button" class="btn text-white mt-2 fw-bold" id="text2" style="background-color:#1B75D0;width:210px;height: 43px; padding: 12px 32px;font-size: 15px;">Discover Teams</a>
-          </div>
-        </div>
-        <div id="dec_img-1">
-        <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;" class="img-fluid border border-warning">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center  mt-4" id="ihi">
-    
-      <div class="text-white">
-        <h2 class="m-0 fw-bold">Every <span id="hi" style="color:#eb711a"></span> has a <br>tab open to Stack Overflow</h2>
-      </div>
-  </div>
-  <div class="mx-auto   mt-2">
-    <img src='<%= asset_path("bar.jpeg") %>' style="width: 80px;" class="img-fluid rounded-start">
-  </div>
-  <div class="container text-center mx-auto text-white " style="width:70vmax">
-    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 m-0 g-0"  >
-      <div class="col">
-        <div class="card h-100 w-80 border-0" id="cards_4" style="background-color:black">
-          <div class="card-body ">
-            <h5 class="card-title" id="text">100+ milslion</h5>
-            <p class="card-text" style="color:#A7ADB4" id="text2">monthly visitors to Stack Overflow & Stack Exchange</p>
-          </div>
-          
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0" id="cards_4" style="background-color:black">
-        <div class="card-body">
-          <h5 class="card-title" id="text">45.1+ billion</h5>
-          <p class="card-text" style="color:#A7ADB4" id="text2">Times a developer got help since 2008</p>
-        </div>
+      <div class="text-center  mt-4" id="ihi">
         
+          <div class="text-white">
+            <h2 class="m-0 fw-bold">Every <span id="hi" style="color:#eb711a"></span> has a <br>tab open to Stack Overflow</h2>
+          </div>
+      </div>
+      <div class="mx-auto   mt-2">
+        <img src='<%= asset_path("bar.jpeg") %>' style="width: 80px;" class="img-fluid rounded-start">
+      </div>
+      <div class="container text-center mx-auto text-white " style="width:70vmax">
+        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-4 m-0 g-0"  >
+          <div class="col">
+            <div class="card h-100 w-80 border-0" id="cards_4" style="background-color:black">
+              <div class="card-body ">
+                <h5 class="card-title" id="text">100+ milslion</h5>
+                <p class="card-text" style="color:#A7ADB4" id="text2">monthly visitors to Stack Overflow & Stack Exchange</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0" id="cards_4" style="background-color:black">
+            <div class="card-body">
+              <h5 class="card-title" id="text">45.1+ billion</h5>
+              <p class="card-text" style="color:#A7ADB4" id="text2">Times a developer got help since 2008</p>
+            </div>
+            
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0" id="cards_4" style="background-color:black">
+            <div class="card-body">
+              <h5 class="card-title" id="text">191% ROI</h5>
+              <p class="card-text" style="color:#A7ADB4" id="text2">from companies using Stack Overflow for Teams</p>
+            </div>
+           
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0" id="cards_4" style="background-color:black">
+            <div class="card-body">
+              <h5 class="card-title" id="text">5,000+</h5>
+              <p class="card-text " style="color:#A7ADB4" id="text2">Stack Overflow for Teams instances active every day</p>
+            </div>
+            
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100 border-0" id="cards_4" style="background-color:black">
-        <div class="card-body">
-          <h5 class="card-title" id="text">191% ROI</h5>
-          <p class="card-text" style="color:#A7ADB4" id="text2">from companies using Stack Overflow for Teams</p>
-        </div>
-       
-        </div>
+        <script>
+            let a = ["Developer", "Data Scientist", "System Admin", "Mobile Developer", "Game Developer"];
+            let hiElement = document.getElementById('hi');
+
+            for (let i = 0; i < a.length; i++) {
+                let newElement = document.createElement('span');
+                newElement.textContent = a[i];
+                newElement.style.display = i === 0 ? 'inline' : 'none';
+                hiElement.appendChild(newElement);
+            }
+
+            let currentIndex = 0;
+
+            setInterval(() => {
+                hiElement.children[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % a.length;
+                hiElement.children[currentIndex].style.display = 'inline';
+            }, 1500);
+        </script>
       </div>
-      <div class="col">
-        <div class="card h-100 border-0" id="cards_4" style="background-color:black">
-        <div class="card-body">
-          <h5 class="card-title" id="text">5,000+</h5>
-          <p class="card-text " style="color:#A7ADB4" id="text2">Stack Overflow for Teams instances active every day</p>
+      <%# second component on landing page end %>
+      <%# third component on landing page is start %>
+      <div class="container" style="margin-top:500px">
+        <div class="row">
+        <div class=" col-12 col-sm-12 col-md-6  mb-5 text-center" id="cards_2">
+              <img src='<%= asset_path("logo-stackoverflow.png") %>' style="width: 200px;" class="img-fluid rounded-start"><br>
+              <div>
+              <img src='<%= asset_path("illo-public.png") %>' style="width: 520px;height: 345px;margin: 32px 0;" class="img-fluid rounded-start border">
+              </div>
+              <div>
+                <h2 id="text" style="width: 425px;height: 105px;margin: 0 48px 12px; font-size:27px" class="border border-dark">A public platform building the definitive collection of coding questions & answers</h2>
+              </div>
+              <div>
+                <p id="text2" style="width: 425px;height: 75px;margin: 0 48px 32px; font-size:19px">A community-based space to find and contribute answers to technical challenges, and one of the most popular websites in the world.</p>
+              </div>
+              <div>
+                <a href="#" type="button" class="btn text-white mt-2 "  id="text2" style="background-color:#E7700D;padding: 12px 32px;font-size: 15px;">Join the community</a><br>
+              <span class="mt-2 " style="font-size: small;">or <a href="#" class="text-dark">search content</a></span>
+              </div>
+
         </div>
+        <div class=" col-12  col-sm-12 col-md-6  mb-5 text-center" id="cards_22">
+          <div class="d-flex flex-row justify-content-center mt-5"><img src='<%= asset_path("Stack_Overflow_icon.png") %>' style="width:50px;" class="img-fluid rounded-start ">
+            <h3 id="" class="mt-2">FOR TEAMS</h3>
+          </div>
+          <div>
+              <img src='<%= asset_path("illo-teams.png") %>' style="width: 520px;height: 345px;margin: 32px 0;" class="img-fluid rounded-start border">
+          </div>
+          <div>
+            <h2 id="text" style="width: 425px;height: 105px;margin: 0 48px 12px; font-size:27px">A private collaboration & knowledge sharing SaaS platform for companies</h2>
+          </div>
+          <div>
+              <p id="text2" style="width: 425px;height: 85px;margin: 0 48px 32px; font-size:19px" class="border border-dark">A web-based platform to increase productivity, decrease cycle times, accelerate time to market, and protect institutional knowledge.</p>
+          </div>
         
+          <div style="width: 210px; height: 17px;margin: 0 154px 12px 154px;" class="d-flex flex-row justify-content-center">
+            <div style="width: 50px" class=""><hr></div>
+            <div id="text2" class="pt-1 pl-2" style="font-size:13px">Get started</div>
+            <div style="width: 50px" ><hr></div>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <a href="#" style="font-size:15px;background-color: #1B75D0;padding: 12px; height: 43px;width: 198px" id="text2"  class="text-white text-decoration-none btn" >For large organization<img src='<%= asset_path("briefcase.png") %>' style="font-size:15px; width: 18px;" class="ms-2"></a>
+             <a href="#" style="font-size:15px;background-color: #1B75D0;padding: 12px;margin: 0 0 0 8px;height: 43px;width: 150px" id="text2"  class="text-white text-decoration-none btn" >For small teams<img src='<%= asset_path("group.png") %>' style="font-size:15px; width: 18px;" class="ms-1"></a>
+          </div>
         </div>
       </div>
+
+    </div><br>
+    <%# third component on landing page is end %>
+    <div class="" style="height: 115px;width: 200px">
     </div>
-  </div>
-    <script>
-        let a = ["Developer", "Data Scientist", "System Admin", "Mobile Developer", "Game Developer"];
-        let hiElement = document.getElementById('hi');
-
-        for (let i = 0; i < a.length; i++) {
-            let newElement = document.createElement('span');
-            newElement.textContent = a[i];
-            newElement.style.display = i === 0 ? 'inline' : 'none';
-            hiElement.appendChild(newElement);
-        }
-
-        let currentIndex = 0;
-
-        setInterval(() => {
-            hiElement.children[currentIndex].style.display = 'none';
-            currentIndex = (currentIndex + 1) % a.length;
-            hiElement.children[currentIndex].style.display = 'inline';
-        }, 1500);
-    </script>
-
-
-
-  </div>
-  <div class="container" style="margin-top:500px">
-    <div class="row">
-    <div class=" col-12 col-sm-12 col-md-6  mb-5 text-center" id="cards_2">
-          <img src='<%= asset_path("logo-stackoverflow.png") %>' style="width: 200px;" class="img-fluid rounded-start"><br>
-          <div>
-          <img src='<%= asset_path("illo-public.png") %>' style="width: 520px;height: 345px;margin: 32px 0;" class="img-fluid rounded-start border">
-          </div>
-          <div>
-            <h2 id="text" style="width: 425px;height: 105px;margin: 0 48px 12px; font-size:27px" class="border border-dark">A public platform building the definitive collection of coding questions & answers</h2>
-          </div>
-          <div>
-            <p id="text2" style="width: 425px;height: 75px;margin: 0 48px 32px; font-size:19px">A community-based space to find and contribute answers to technical challenges, and one of the most popular websites in the world.</p>
-          </div>
-          <div>
-            <a href="#" type="button" class="btn text-white mt-2 "  id="text2" style="background-color:#E7700D;padding: 12px 32px;font-size: 15px;">Join the community</a><br>
-          <span class="mt-2 " style="font-size: small;">or <a href="#" class="text-dark">search content</a></span>
-          </div>
-
-    </div>
-    <div class=" col-12  col-sm-12 col-md-6  mb-5 text-center" id="cards_22">
-      <div class="d-flex flex-row justify-content-center mt-5"><img src='<%= asset_path("Stack_Overflow_icon.png") %>' style="width:50px;" class="img-fluid rounded-start ">
-        <h3 id="" class="mt-2">FOR TEAMS</h3>
-      </div>
-      <div>
-          <img src='<%= asset_path("illo-teams.png") %>' style="width: 520px;height: 345px;margin: 32px 0;" class="img-fluid rounded-start border">
-      </div>
-      <div>
-        <h2 id="text" style="width: 425px;height: 105px;margin: 0 48px 12px; font-size:27px">A private collaboration & knowledge sharing SaaS platform for companies</h2>
-      </div>
-      <div>
-          <p id="text2" style="width: 425px;height: 85px;margin: 0 48px 32px; font-size:19px" class="border border-dark">A web-based platform to increase productivity, decrease cycle times, accelerate time to market, and protect institutional knowledge.</p>
-      </div>
-    
-      <div style="width: 210px; height: 17px;margin: 0 154px 12px 154px;" class="d-flex flex-row justify-content-center">
-        <div style="width: 50px" class=""><hr></div>
-        <div id="text2" class="pt-1 pl-2" style="font-size:13px">Get started</div>
-        <div style="width: 50px" ><hr></div>
-      </div>
-      <div class="d-flex flex-row justify-content-center">
-        <a href="#" style="font-size:15px;background-color: #1B75D0;padding: 12px; height: 43px;width: 198px" id="text2"  class="text-white text-decoration-none btn" >For large organization<img src='<%= asset_path("briefcase.png") %>' style="font-size:15px; width: 18px;" class="ms-2"></a>
-         <a href="#" style="font-size:15px;background-color: #1B75D0;padding: 12px;margin: 0 0 0 8px;height: 43px;width: 150px" id="text2"  class="text-white text-decoration-none btn" >For small teams<img src='<%= asset_path("group.png") %>' style="font-size:15px; width: 18px;" class="ms-1"></a>
-      </div>
-    </div>
-  </div>
-  </div><br>
-  <div class="" style="height: 115px;width: 200px">
-
-  </div>
-</section>
-<section class="container ">
-  <div class=" mx-auto text-center" style="height: 360px;width: 1024px;padding: 96px 0 64px;" >
+  </section>
+  <%# second and third components on landing page is end %>
+  <section class="container ">
+    <div class=" mx-auto text-center" style="height: 360px;width: 1024px;padding: 96px 0 64px;" >
     <p style="height: 25px; width: 1024px;font-size:19px;color: 636B74; margin: 0 0 19px;" id="text2" >Thousands of organizations around the globe use Stack Overflow for Teams</p>
     <div>
       <div id="carouselExampleDark" class="carousel carousel-dark slide mt-5 bg-white" data-bs-ride="carousel">
@@ -378,41 +397,35 @@
             </div>
           </div>
         </div>
-        <%# <div class="carousel-indicators border border-dark ">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active " aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> %>
-    
-      
       </div>
     </div>
+    </div>
+  </section>
+  <div class=" bg-danger rounded-start" style="height: 50px; width: 60px;">
   </div>
-</section>
-<div class=" bg-danger rounded-start" style="height: 50px; width: 60px;">
-</div>
-<div class=" bg-warning rounded-end" style="height: 50px; width: 60px;margin-left:59px ;">
-</div>
-<section class="container"> 
-  <div class="row row-cols-1 row-cols-md-3 g-0  mx-auto border border-dark d-flex" style="width: 70%;">
-    <div class="col">
-      <div class="card ">
-      <img src='<%= asset_path("illo-question.png") %>' style="width: 100%;height: 80%;" class="img-fluid rounded-start d-block ">
-      </div>
-    </div>
-    <div class="col ">
-      <div class="card ">
-      <img src='<%= asset_path("illo-for-you.png") %>' style="width: 100%;height: 80%;margin-left:300px ;" class="img-fluid rounded-start d-block ">    
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" id="cards_3">
-      <img src='<%= asset_path("illo-home-search.png") %>'  class="img-fluid rounded-start d-block ">    
-      </div>
-    </div>
+  <div class=" bg-warning rounded-end" style="height: 50px; width: 60px;margin-left:59px ;">
   </div>
+  <%# five and sixth conpmanents on landing page is start %>
+  <section class="container"> 
+    <div class="row row-cols-1 row-cols-md-3 g-0  mx-auto border border-dark d-flex" style="width: 70%;">
+      <div class="col">
+        <div class="card ">
+        <img src='<%= asset_path("illo-question.png") %>' style="width: 100%;height: 80%;" class="img-fluid rounded-start d-block ">
+        </div>
+      </div>
+      <div class="col ">
+        <div class="card ">
+        <img src='<%= asset_path("illo-for-you.png") %>' style="width: 100%;height: 80%;margin-left:300px ;" class="img-fluid rounded-start d-block ">    
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" id="cards_3">
+        <img src='<%= asset_path("illo-home-search.png") %>'  class="img-fluid rounded-start d-block ">    
+        </div>
+      </div>
+    </div>
   
-  <div class="text-center  mx-auto text-white " style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;border-radius: 20px;">
+  <div class="text-center  mx-auto text-white bg-dark" style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;border-radius: 20px;">
     <div>
         <img src='<%= asset_path("stack-overflow-teams2.png") %>'  class="img-fluid" style="width: 250px;margin: 0 0 32px;">  
     </div>
@@ -421,7 +434,7 @@
     </div>
       <a href="#" type="button" class="btn text-white mt-2 fw-bold" id="text2" style="background-color:#1B75D0;width:210px;height: 43px; padding: 12px 32px;font-size: 15px;">Take a tour of Teams</a>
 
-    <div style="width: 1102px; height:265px; margin: -24px -24px 64px; padding: 64px 0 0;" class=" mx-auto border border-info ">
+    <div style="width: 1102px; height:265px; margin: -24px -24px 64px; padding: 64px 0 0;" class=" mx-auto ">
       <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 d-flex justify-content-around">
         <div class="col">
           <div class="card h-100  text-center bg-dark" >
@@ -453,17 +466,17 @@
         </div>
       </div>
     </div>
-    <div class="text-center border">
+    <div class="text-center">
       <h2 id="text" class="mb-3">Ensure your company stays on course</h2>
       <h5 id="text2">Here are just a few types of technologists that we help.</h5>
     </div>
     
 
 
-    <div class="border border-danger">
+    <div class="">
       <div class="row row-cols-1 row-cols-md-1 row-cols-lg-5 g-0 mx-auto  align-items-center d-flex justify-content-evenly" style="width: 1150px;height: 500px;">
         <div class="col mt-5" style="height:256px;width:165px;margin: 0px;" id="cardanim1">
-          <div class="card text-center"  onclick="cardfun1()" style="background-color: #0C0D0E;">
+          <div class="card text-center bg-dark border-0"  onclick="cardfun1()" style="background-color: #0C0D0E;">
             <img src='<%= asset_path("rocket.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width:96px;height:96px;"> 
             <div class="card-body">
                 <h3 class="card-title" id="text">DevOps engineers</h3>
@@ -471,7 +484,7 @@
           </div> 
         </div>
         <div class="col mt-5" style="height:300px;width:300px;margin: 0px;display: none;" id="cardanim11" >
-          <div class="card text-center bg-dark" >
+          <div class="card text-center border-0" style="background-color: #3b4045;">
             <img src='<%= asset_path("rocket.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width:105px;height:96px;"> 
             <div class="card-body">
                 <h3 class="card-title" id="text">DevOps engineers</h3>
@@ -480,7 +493,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:256px;width:165px;margin: 0px;" id="cardanim2">
-          <div class="card text-center "  onclick="cardfun2()" style="background-color: #0C0D0E;">
+          <div class="card text-center bg-dark border-0"  onclick="cardfun2()" style="background-color: #0C0D0E;">
            <img src='<%= asset_path("network22.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width:96px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Data scientists</h3>
@@ -488,7 +501,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:300px;width:300px;display: none;" id="cardanim22" >
-          <div class="card text-center  bg-dark">
+          <div class="card text-center  border-0" style="background-color: #3b4045;">
             <img src='<%= asset_path("network.png") %>' class="img-fluid mx-auto mb-3 mt-3" style="width: 105px; height: 96px;"> 
             <div class="card-body">
                 <h3 class="card-title" id="text">Data scientists</h3>
@@ -497,7 +510,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:256px;width:165px;margin: 0px;display: none;"  id="cardanim3">
-          <div class="card text-center  "  onclick="cardfun3()" style="background-color: #0C0D0E;">
+          <div class="card text-center  bg-dark"  onclick="cardfun3()" style="background-color: #0C0D0E;">
            <img src='<%= asset_path("software.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Software engineers</h3>
@@ -505,7 +518,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:300px;width:300px;margin: 0px;" id="cardanim33">
-          <div class="card text-center  bg-dark"  >
+          <div class="card text-center  border-0" style="background-color: #3b4045;">
            <img src='<%= asset_path("development.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Software engineers</h3>
@@ -514,7 +527,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:256px;width:165px;margin: 0px;" id="cardanim4">
-          <div class="card text-center "  onclick="cardfun4()"  style="background-color:#0C0D0E;">
+          <div class="card text-center bg-dark border-0"  onclick="cardfun4()"  style="background-color:#0C0D0E;">
            <img src='<%= asset_path("headphones.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Support teams</h3>
@@ -522,7 +535,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:300px;width:300px;margin: 0px; display: none;" id="cardanim44">
-          <div class="card text-center  bg-dark"  >
+          <div class="card text-center  border-0" style="background-color: #3b4045;">
            <img src='<%= asset_path("headphone.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Support teams</h3>
@@ -531,7 +544,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:256px;width:165px;margin: 0px; " id="cardanim5">
-          <div class="card text-center "  onclick="cardfun5()" style="background-color: #0C0D0E;">
+          <div class="card text-center bg-dark border-0"  onclick="cardfun5()" style="background-color: #0C0D0E;">
            <img src='<%= asset_path("group-chat.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 96px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Engineeringleaders</h3>
@@ -539,7 +552,7 @@
           </div>
         </div>
         <div class="col mt-5" style="height:300px;width:300px;margin: 0px;display: none;" id="cardanim55">
-          <div class="card text-center  bg-dark"  style="">
+          <div class="card text-center  border-0" style="background-color: #3b4045;">
            <img src='<%= asset_path("management.png") %>'  class="img-fluid mx-auto mb-3 mt-3" style="width: 105px;height: 96px;"> 
             <div class="card-body">
               <h3 class="card-title" id="text" >Engineering leaders</h3>
@@ -792,7 +805,7 @@
                 </div>
 
                 <div style="margin:40px 0 0" class="text-center">
-                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e3e6e8;color:#0C3B6A;" id="text2" class="fw-bold rounded text-decoration-none ">Get started</a>
+                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 90px;background-color: #e3e6e8;color:#0C3B6A;" id="text2" class="fw-bold rounded text-decoration-none ">Get started</a>
                 </div>
 
                   <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Up to 250 teammates</p>
@@ -844,8 +857,9 @@
                 </div>
                 
 
-                <div style="margin:0 0 0" class="text-center">
-                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e7700d;" id="text2" class="fw-bold rounded text-decoration-none text-white">create a free team</a>
+                <div  class="text-center mt-1">
+                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white">Get started</a>
+
                 </div>
 
                   <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
@@ -867,7 +881,7 @@
                     <img src='<%= asset_path("plus-sign.png") %>'  class="img-fluid " style="width: 21px;height: 21px;"> 
                   </div>
                     
-                    <p style="font-size:15px" id="text2" class="mt-2 pt-1">Premium features of Business</p>
+                    <p style="font-size:15px" id="text2" class="">Premium features of Business</p>
                 </div>
                 <div class="d-flex">
                   <div style="margin: 0 12px 0 0;">
@@ -876,6 +890,12 @@
                     <p class="text2" style="font-size: 15px;">Unlimited Teams within your instance</p>
                 </div>
 
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                  <img src='<%= asset_path("mountains.png") %>'  class="img-fluid" style="width: 22px;height: 20px;"> 
+                  </div>
+                    <p class="text2" style="font-size: 15px;">Flexible hosting options</p>
+                </div>
                 <div class="d-flex">
                   <div style="margin: 0 12px 0 0;">
                   <img src='<%= asset_path("mountains.png") %>'  class="img-fluid" style="width: 22px;height: 20px;"> 
@@ -889,9 +909,15 @@
                   </div>
                   <p class="text2" style="font-size: 15px;">Robust read and write API</p>
                 </div>
+                <div class="d-flex">
+                  <div style="margin: 0 12px 0 0;">
+                    <img src='<%= asset_path("chevrons.png") %>'  class="img-fluid " style="width: 22px;height: 20px;"> 
+                  </div>
+                  <p class="text2" style="font-size: 15px;">Robust read and write API</p>
+                </div>
 
-                <div style="margin:0 0px" class="text-center">
-                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 70px;background-color: #e7700d;" id="text2" class="fw-bold rounded text-decoration-none text-white">create a free team</a>
+                <div style="margin:0 0px" class="text-center mt-2">
+                    <a href="#" style="height: 43px;margin: 30px 0 0;padding: 12px 70px;background-color: #2b2d6e;" id="text2" class="fw-bold rounded text-decoration-none text-white">Request a demo</a>
                 </div>
 
                   <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
@@ -905,10 +931,10 @@
       <%# four cards container start in 6th component %>
 
 
-    <div style="margin-top:100px;width:1200px;" class="container border border-warning">
+    <div style="margin-top:100px;width:1200px;" class="container">
       <div class="row row-cols-1 row-cols-md-4 g-2 " >
         <div class="col">
-          <div class="card border" style="background-color:#0C0D0E;">
+          <div class="card bg-dark border border-light" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -917,7 +943,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card border" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -926,7 +952,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card border" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -935,7 +961,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card border" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:20px">
              
@@ -949,54 +975,304 @@
     <%# four cards container end in 6th component %>
 
     <%# sixth sub component in 6th component start %>
-    <div style="height:480px;width: 1290px; " class="border border-danger mt-5 mx-auto">
+    <div style="height:480px;width: 1290px; " class=" mt-5 mx-auto">
       <div class="row row-cols-1 row-cols-md-3 g-0" style="width:100%">
         <div class="col" style="width:25%">
-          <div class="card">
-             <img src='<%= asset_path("illo-integrations-left.png") %>'  class="img-fluid  bg-dark" style=""> 
+          <div class="card border-0">
+             <img src='<%= asset_path("illo-integrations-left.png") %>'  class="img-fluid border-0 bg-dark" style=""> 
           
           </div>
         </div>
-        <div class="col" style="width:50%">
-          <div class="card">
+        <div class="col " style="width:50%">
+          <div class="card border-0">
            
-            <div class="card-body bg-dark">
+            <div class="card-body bg-dark border border-dark">
               <h2 class="card-title" id="text">Integrates with and improves other tools</h2>
               <p class="card-text" id="text2" class="fw-bold" style="font-size:19px;color:#babfc5;margin:0 0 32px;">All plans come with integrations for ChatOps tools Slack & Microsoft Teams in order to cut down on pings, limit distractions and make the tools even more powerful. Business and Enterprise customers get access to Jira, GitHub & Okta integrations.</p>
-              <div>
-                edfef
+              <div style="width:614px;height: 90px;">
+                <a href="#" class="p-2"><img src='<%= asset_path("slack.png") %>'  class="img-fluid p-2 rounded" style="height: 64px;width: 64px;background-color:white ;"></a>
+                <a href="#" class="m-2"><img src='<%= asset_path("github.png") %>'  class="img-fluid  bg-white p-2 rounded" style="height: 64px;width: 64px;"></a>
+                <a href="#" class="m-2"><img src='<%= asset_path("teams.png") %>'  class="img-fluid  bg-white rounded" style="height: 64px;width: 64px;"></a>
+                <a href="#" class="m-2"><img src='<%= asset_path("jira.png") %>'  class="img-fluid  bg-white rounded p-2" style="height: 64px;width: 64px;"></a>
+                <a href="#" class="m-2"><img src='<%= asset_path("okta.png") %>'  class="img-fluid  bg-white rounded p-2" style="height: 64px;width: 64px;"></a>
               </div>
             </div>
           </div>
         </div>
         <div class="col" style="width:25%">
-          <div class="card">
+          <div class="card border-0">
              <img src='<%= asset_path("illo-integrations-right.png") %>'  class="img-fluid  bg-dark"> 
           </div>
         </div>
-  
-        </div>
+          <img src='<%= asset_path("teamss.png") %>'  class="img-fluid  bg-dark ms-5" style="width: 170px;">
+          
+              <div style="height:50px;width:50px;margin-left: 1020px;" class="bg-primary rounded">
+              </div>
+              <div style="height:50px;width:50px; margin-left: 1285px;" class="bg-danger rounded">
+              </div>
+         
+      </div>
+      
     </div>
     <%# sixth sub component in 6th component end %>
+    <%# seventh sub component in 6th component start %>
+    <h5 id="text2" style="font-size: 19x;color:#babfc5;margin: 32px 0 0;padding:0 0 32px;">Some of the premium features available with paid tiers</h5>
+    <%# seventh sub component in 6th component end %>
 
+    <div style="height:40px;width:40px;" class="bg-success rounded ms-5">
+    </div>
+    <div style="height:40px;width:40px; " class="bg-info rounded ms-2">
+    </div>
+  </div>
+  </section>
+  <%#five and sixth conpmanents on landing page is end %>
+
+  <%# sevent conpmanent on landing page is start %>
+  <section>
+  <%# sevent conpmanent on landing page is start %>
+  <div class="container mx-auto" style="width: 1054px;height: 203px;margin: -96px 194px 0;padding: 0 24px;">     
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" >
+        <div class="card text-center car"  id="eigth_component" style="height:179px;width:228px;margin:12px;padding:12px;background-color: #d6d9dc;">
+          <img src='<%= asset_path("key22.png") %>'  class="img-fluid mx-auto mt-3 mb-1" style="width:48px;height:48px;">
+          <div class="card-body">
+            <p class="card-title " id="text">Robust read and write API</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center car" style="height:179px;width:228px;margin:12px;padding:12px;background-color: #d6d9dc;">
+          <img src='<%= asset_path("lock2.png") %>'  class="img-fluid mx-auto mt-3 mb-1" style="width:48px;height:48px;">
+          <div class="card-body">
+            <p class="card-title " id="text">Single sign-on with AD or SAML</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center car" style="height:179px;width:228px;margin:12px;padding:12px;background-color: #d6d9dc;">
+          <img src='<%= asset_path("team.png") %>'  class="img-fluid mx-auto mt-3 mb-1" style="width:48px;height:48px;">
+          <div class="card-body">
+            <p class="card-title " id="text">Your own customer success representative</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center car" style="height:179px;width:228px;margin:12px;padding:12px;background-color: #d6d9dc;">
+          <img src='<%= asset_path("thin.png") %>'  class="img-fluid mx-auto mt-3 mb-1" style="width:48px;height:48px;">
+          <div class="card-body">
+            <p class="card-title " id="text">99.5% uptime SLA and priority support</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .car {
+      
+       
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .animated {
+        transform: scale(1);
+    }
+  </style>
+  <script>
+  const cards = document.querySelectorAll('.car');
+    let currentIndex = 0;
+
+    function animateCards() {
+        if (currentIndex < cards.length) {
+            cards[currentIndex].classList.add('animated');
+            currentIndex++;
+        } else {
+            clearInterval(animationInterval);
+        }
+    }
+
+    const animationInterval = setInterval(animateCards, 300); // Adjust the interval time as needed
+  </script>
+  <%# sevent conpmanent on landing page  is end %>
+  </section>
+  <%# sevent conpmanent on landing page is end %>
+
+  <%# eight component on landing page  is start %>
+  <section>
+    <%# eight component on landing page  is start %>
+    <div class="container  mt-5 p-3">
+      <div class="row row-cols-1 row-cols-md-4 g-0">
+          <div class="col">
+            <div class="card border-0" style="height:383px;width:100%">
+              <img src='<%= asset_path("quote.png") %>'  class="img-fluid ms-3" style="width:48px;height:48px;">
+              <div class="card-body">
+                
+                <p class="card-text" id="text2" style="font-size:17px;margin: 0 0 32px">Stack Overflow for Teams has been a resource for our entire company. Not only for developers to solve problems, it’s also enabled our sales field to answer technical questions that help them close deals.</p>
+                <hr>
+                <strong style="padding:16px 0 0 " id="text2">Director of Product Management</strong>
+                <p id="text2" class="">Microsoft</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0" style="height:383px;width:100%">
+              <img src='<%= asset_path("quote.png") %>'  class="img-fluid ms-3" style="width:48px;height:48px;">
+              <div class="card-body">
+                
+                <p class="card-text" id="text2" style="font-size:17px;margin: 0 0 32px">Engineers should help solve the hardest questions, the unknowns, where being familiar with how the product was built is essential. But we don’t want to keep answering solved problems over and over again. That’s where Stack Overflow for Teams really helps.</p>
+                <hr>
+                <strong style="padding:16px 0 0 " id="text2">Director of Engineering</strong>
+                <p id="text2" class="">Elastic Cloud</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0" style="height:383px;width:100%">
+              <img src='<%= asset_path("quote.png") %>'  class="img-fluid ms-3" style="width:48px;height:48px;">
+              <div class="card-body">
+                
+                <p class="card-text" id="text2" style="font-size:17px;margin: 0 0 20px">As we started to use [Stack Overflow for Teams] and saw how nice it was to have a repository of information, we started to see it spread to other teams. Our customer support team started using it, our people success team started using it, next thing we knew, we had [Slack] integrations all over the place.</p>
+                <hr>
+                <strong style="padding:16px 0 0 " id="text2">Engineering</strong>
+                <p id="text2" class="">Expensify</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0" style="height:383px;width:100%">
+              <img src='<%= asset_path("quote.png") %>'  class="img-fluid ms-3" style="width:48px;height:48px;">
+              <div class="card-body">
+                
+                <p class="card-text" id="text2" style="font-size:17px;margin: 0 0 32px">What we love about Stack Overflow for Teams is that it’s a very dynamic tool…there’s just so many ways to use this as a liaison between different teams and different knowledge bases.</p>
+                <hr>
+                <strong style="padding:16px 0 0 " id="text2">Software Engineer</strong>
+                <p id="text2" class="">Box</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <%# eight component on landing page  is end %>
+  </section>
+  <%# eight component on landing page  is end %>
+
+  <%# ninth component on landing page  is start %>
+  <section>
+  <%# ninth component on landing page  is start %>
+
+    <div class="container-fluid  mt-5 mx-auto  text-center" style="height:750px;">
+      <div>
+          <img src='<%= asset_path("logo-stackoverflow.png") %>'  class="img-fluid ms-3" style="height: 37px;width: 187px;margin: 0 0 12px;">
+          <hr style="width:187px" class="text-center mx-auto">
+          <h2 id="text" style="font-size:27px;margin:0 351px;padding:25px 24px 0">Additional products that reach and engage developers & technologists…</h2>
+      </div>
+
+      <div style="width:845px;height: 390px;" class="mx-auto mt-5">
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <div class="card" id="ninecard" style="width:390px;height:168px;margin: 16px;padding: 32px 24px;">
+                <div class="d-flex mx-auto">
+                  <img src='<%= asset_path("Stack_Overflow_icon.png") %>'  class="img-fluid border-end" style="height: 35px;width: 40px;margin: 5px;">  
+                  <h5 id="text" style="margin:10px 10px 10px 0">ADVERTISING</h5>
+                </div>              
+                <div class="card-body">
+                  <p class="card-text" id="text2" style="font-size: 19px;color:#636b74">Reach the world’s largest audience of developers and technologists</p>
+                </div>
+              </div>
+            </div>  
+            <div class="col">
+              <div class="card" id="ninecard" style="width:390px;height:168px;margin: 16px;padding: 32px 24px;">
+                <div class="d-flex mx-auto">
+                  <img src='<%= asset_path("Stack_Overflow_icon.png") %>'  class="img-fluid border-end" style="height: 35px;width: 40px;margin: 5px;">  
+                  <h5 id="text" style="margin:10px 10px 10px 0">COLLECTIVES</h5>
+                </div>              
+                <div class="card-body">
+                  <p class="card-text" id="text2" style="font-size: 18px;color:#636b74">Connecting communities with the specific technologies they use the most</p>
+                </div>
+              </div>
+            </div>    
+            <div class="col mx-auto">
+              <div class="card" id="ninecard" style="width:390px;height:168px;margin-top:-15px;padding: 32px 24px;">
+
+                 <div class="d-flex mx-auto">
+                  <img src='<%= asset_path("Stack_Overflow_icon.png") %>'  class="img-fluid border-end" style="height: 35px;width: 40px;margin: 5px;">  
+                  <h5 id="text" style="margin:10px 10px 10px 0">TALENT</h5>
+                  
+               
+          
+                </div>              
+                <div class="card-body">
+                  <p class="card-text" id="text2" style="font-size: 19px;color:#636b74">Build your employer brand</p>
+                </div>
+              </div>
+            </div>
+          </div>
+           <a href="#" type="button" class="btn text-white mt-5 fw-bold"  id="text2" style="background-color:#E7700D;padding: 12px 32px;font-size: 15px;">About the company</a><br>
+           <div id="ninbut" style="width:330px;padding:10px" class="mx-auto rounded"><span id="text2" class="mt-5">want to work here? <a href="#" type="button" class="text-decoration-none ms-0">Current job openings</a></span></div>
+
+    </div>
+      </div>
+        
+  <%# ninth component on landing page  is end %>
+  </section>
+  <%# ninth component on landing page  is end %>
+
+  <%# tenth component on landing page  is start %>
+<section>
+  <%# tenth component on landing page  is start %>
+  <div style="height: 672px;padding: 32px 0 96px;background: radial-gradient(110% 20% at top, transparent 50%, #0c3b6a 51%);" class="container rounded border border-danger">
+    <div style="height:480px;width: 1290px; " class=" mt-5 mx-auto">
+      <div class="row row-cols-1 row-cols-md-3 g-0" style="width:100%">
+        <div class="col" style="width:25%">
+          <div class="card border" style="width:316px;height:464px;margin: 40px 3px;">
+          </div>
+        </div>
+        <div class="col text-white" style="width:50%">
+          <div class="card " style="padding: 30px 20px;background-color:#0c3b6a ;">
+           
+            <div class="card-body" >
+              <div class="text-center" style="margin:0 0 32px;padding: 0 0 32px;">
+               <img src='<%= asset_path("stack_exchange.png") %>'  class="img-fluid" style="height: 40px;width: 147px;">
+             </div>
+              <h2 class="card-title text-center" id="text" style="font-size:32px;margin:0 3px 24px 3px;">Explore technical topics and other disciplines across 170+ Q&A communities</h2>
+              <p class="card-text text-white text-center" id="text2" class="" style="font-size:19px;color:#d6e8fa;margin:0 3 32px 3;">From Server Fault to Super User, much of the Stack Exchange network continues our mission to empower the world to develop technology through collective knowledge. Other sites on the Stack Exchange network further encourage knowledge sharing across topics such as cooking and medicine.</p>
+              <div class="text-center">
+                <a href="#" type="button" class="btn fw-bold"  id="text2" style="background-color:#ffb500;padding: 12px 32px;font-size: 15px;">Explore the network</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="width:25%">
+          <div class="card border" style="width:316px;height:464px;margin: 40px 3px;">
+          </div>
+        </div>       
+      </div>
+      
+    </div>
+  </div>
+  <%# tenth component on landing page  is end %>
+</section>
+<section>
+  <div class="container-fluid border border-dark d-flex justify-content-center" style="height:120px;margin:32px 0;padding: 32px 0;">
+    <div>
+      <img src='<%= asset_path("lock.png") %>'  class="img-fluid" style="height: 48px;width: 48px;"> 
+    </div>
+    <p id="text2" style="width:523px;height:23px;margin: 16px 24px;">Build a <strong>private community</strong> to share technical or non-technical knowledge.</p>
+    <a href="#" style="border-radius: 2px;border: 2px solid #1b75d0;padding: 12px 40px;font-size: 15px;" id="text2" class="text-primary  rounded text-decoration-none">Create a free team</a>
   </div>
 </section>
-
-
-<% if user_signed_in? %>
-  <h1>Welcome Home, <%= current_user.email %> venkateshhhhhh</h1>
-  <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete } %>
-<% else %>
-  
-  
-<% end %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
+  <%# tenth component on landing page  is end %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style>
       @media screen and (min-width: 1000px) {
         #card-1 {
           width: 55vmin;
         }
-        }    
+      }    
       @media screen and (max-width: 769px) {
         #dec_img-1 {
           display: none;
@@ -1022,13 +1298,9 @@
           top:1950px;
           left:0;
           right: 0;
-          bottom: 0;
-         
+          bottom: 0; 
         }
-
       }
-     
-    </style>
-
+  </style>
 </body>
 </html>
