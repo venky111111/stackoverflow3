@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth' }
 
-  root 'landingpage#index'
+  root 'ways#index'
   resources :landingpage
+  resources :homepage
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
