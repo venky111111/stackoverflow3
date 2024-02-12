@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Post Details</h1>
+
+    <h2><%= @post.content %></h2>
+    <p>By: <strong><%= @post.user.email %></strong></p>
+
+    <div class="comments-section">
+      <h3>Comments:</h3>
+      <% @comments.each do |comment| %>
+        <div class="comment">
+          <p><strong><%= comment.user.email %>:</strong> <%= comment.content %></p>
+          <p><strong>Likes ( <%= @comment_likes_counts[comment.id] || 0 %> )</strong></p>
+      
+          <% if comment.likes.exists?(user: current_user) %>
+              <%= link_to 'Unike Comment', likes_path(postcomment_id: comment.id), method: :post, class: 'btn btn-primary' %>
+          <% else %>
+            <%= link_to 'Like Comment', likes_path(postcomment_id: comment.id), method: :post, class: 'btn btn-primary' %>
+          <% end %>
+      
+        </div>
+      <% end %>
+    <% if @post.likes.exists?(user: current_user) %> 
+         <%= link_to 'Unlike Post', likes_path(post_id: @post.id), method: :destroy, class: 'action-button' %> 
+        <% else %>
+        <%= link_to 'Like Post', likes_path(post_id: @post.id), method: :create, class: 'action-button' %> 
+    <% end %> 
+
+    
+
+
+  </div>
+  
+  <%= form_with(model: [@post, @comment], url: postcomments_path, local: true) do |form| %>
+    <%= form.hidden_field :post_id, value: @post.id %>
+
+    <div>
+      <%= form.label :content %><br>
+      <%= form.text_area :content, rows: 3 %>
+    </div>
+  
+    <div class="buttons">
+      <%= form.submit "Add Comment", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  
+    <%= link_to 'Back to Home', posts_path, class: 'btn btn-primary back-btn' %>

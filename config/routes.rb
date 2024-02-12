@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'ways#index'
   resources :landingpage
   resources :homepage
+  resources :posts
+  resources :likes
+  resources :postcomments
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

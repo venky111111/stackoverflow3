@@ -123,48 +123,50 @@
     </div>
     </div>
   </nav>
-<section>
+<section class="bg-dark text-white">
    <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <div class="container border border-danger" style="height: 600px;width: 250px; overflow-y: scroll;overflow-x:hidden">
-              <ul style="width:210px; font-size: small;" >
-                <li><button class="dropdown-item" type="button"><img src='<%= asset_path("home.png") %>' style="width: 18px;"class="">   Home</li>
-                <li><button class="dropdown-item" type="button"><img src='<%= asset_path("question-2.png") %>' style="width: 18px;" class="">   Questions</li>
-                <li><button class="dropdown-item" type="button"><img src='<%= asset_path("price-tag-2.png") %>' style="width: 18px;" class="">   Tags</li>
-                <li class="mt-5"><button class="dropdown-item" type="button"><img src='<%= asset_path("group.png") %>' style="width: 18px;" >   Users</li>
-                <li><button class="dropdown-item" type="button"><img src='<%= asset_path("briefcase.png") %>' style="width: 18px;" class="">   Companies</li>
+      <div class="col-md-2 mt-3" style="width: 220px;">
+        <div class=" " style=" ">
+              <ul style="font-size:small;list-style-type: none;"  >
+                <li><button class="dropdown-item text-white fw-bold" type="button"><img src='<%= asset_path("home_1.png") %>' style="width: 18px;"class=" ">   Home</li>
+                <li><button class="dropdown-item text-white" type="button"><img src='<%= asset_path("faq.png") %>' style="width: 18px;">   Questions</li>
+                <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("add_1.png") %>' style="width: 18px;">   Tags</li>
+                <li class="mt-5"><button class="dropdown-item text-white "  type="button"><img src='<%= asset_path("bookmark.png") %>' style="width: 18px;" >   Saved</li>
+                   <li class=""><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("user_1.png") %>' style="width: 18px;" >   Users</li>
+                <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("office.png") %>' style="width: 18px;" class="bg-light">   Companies</li>
 
                 <li class="mt-2">
-                  <div class="d-flex"><p class="dropdown-item fw-bold" type="button">COLLECTIVES</p>
+                  <div class="d-flex"><p class="dropdown-item fw-bold text-white fw-bold" type="button">COLLECTIVES</p>
                     <h5>+</h5>
                   </div>
-                </li>
-                <li class=""><button class="dropdown-item" type="button"><img src='<%= asset_path("star-2.png") %>' style="width: 18px;" class="">Explore collectives
+                </li> 
+                <li class=""><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("star-2.png") %>' style="width: 18px;" class="">Explore collectives
                 </li>
                 <li class="mt-2">
-                  <div class="d-flex"><p class="dropdown-item fw-bold" type="button">LABS</p>
+                  <div class="d-flex"><p class="dropdown-item fw-bold text-white" type="button">LABS</p>
                        <i class="fa fa-info-circle mt-2" style="font-size:15px"></i> 
                   </div>
                 </li>
-                 <li><button class="dropdown-item" type="button"><img src='<%= asset_path("chat.png") %>' style="font-size:15px; width: 18px;" class="">   Companies
+                 <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("chat_1.png") %>' style="font-size:15px; width: 20px;"> Discussions
                  </li>
                  <li class="mt-2">
                   <div class=""><p class="dropdown-item fw-bold" type="button">COLLECTIVES</p>
                     
                   </div>
                 </li>
-                <li class="mt-2"><p class="fw-bold dropdown-item">TEAMS</p></li>
-                <li class="mt-2" >
+                <li class="mt-2">
+                  <div class="d-flex"><p class="dropdown-item fw-bold text-white fw-bold" type="button">TEAMS</p>
+                    <h5>+</h5>
+                  </div>
+                </li>
+                <li class="" >
                 <div class=" mx-auto"  style="width: 168px">
-                  <p class="txt">
-                    <span p class="fw-bold"style= " font-size: 15px;">Stack Overflow for Teams –</span><br>
-                    <span class="txt" style= " font-size: 12px;">Start collaborating and sharing organizational knowledge.</span>
-                  </p>
+                 
                   <div class="text-center">
-                  <img src='<%= asset_path("teams-illo-free-sidebar-promo.png") %>' style="width: 120px;" class="img-fluid rounded-start">
-                  <button class="btn rounded border text-white" style="width: 168px;font-size:small;background-color:#eb711a">Create free team</button>
-                  <p class="btn mb-0" style="font-size:small;">Why Teams?</p>
+                 
+                  <a href="#" class="text-decoration-none mb-5 text-white" style="width: 168px;">Create free team</a>
+                  <button class="btn btn-outline-primary mt-3" style="width: 168px;font-size:small;">Look for your teams?</button>
                   </div>
 
                 </div></li>
@@ -173,49 +175,100 @@
             </div>
 
       </div>
-      <div class="col-md-8 border border-warning">
-          <h1>Homepage#index</h1>
-<p>Find me in app/views/homepage/index.html.erb</p>
- <% if user_signed_in? %>
-      <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-link' %>
-    <% else %>
-      <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
-      <%= link_to 'Sign up', new_user_registration_path, class: 'action-button' %>
-    <% end %> 
- <div class="user-section">
-    <% if user_signed_in? %>
-      <h1 style="color: #4267B2;">Welcome, <%= current_user.email %></h1>
-      <h2 style="color: #555;">Explore All Posts</h2>
-      <%# <%= link_to 'Create New Post', new_post_path, class: 'action-button' %> 
-      <div class="post-container">
-          <% @posts.each do |post| %>
-          <div class="post">
-            <h3><%= post.user.email %></h3>
-            <p><%= post.tittle %></p>
-            <p><%= post.content %></p>
-            <p>Created At <%= post.user.created_at.strftime("%d-%m-%Y") %></p>
-           
+      <div class="col-md-7 border border-warning m-0">
+        <div>
+          <div class="d-flex  justify-content-between pt-5">
+            <div>
+              <h4>All Questions</h4>
+            </div>
 
-            <%= link_to 'View Post', post_path(post), class: 'action-button' %>
-            <% if post.likes.exists?(user: current_user) %> 
-              <%# <%= link_to 'Unlike Post', likes_path(post_id: post.id), method: :destroy, class: 'action-button' %> 
-              <% else %>
-              <%# <%= link_to 'Like Post', likes_path(post_id: post.id), method: :create, class: 'action-button' %> 
-           
-            <% end %> 
-         
+            <div> 
+              <%= link_to 'Ask Question', new_post_path, class: 'action-button btn btn-primary' %> 
+            </div>
           </div>
-          <div class="likes-section">     
-         </div>
-        <% end %>
+          <div class="d-flex justify-content-around pt-5">
+            <div>
+              <h5><%= @posts.all.count%> Questions</h5>
+            </div>
+
+            <div style="font-size:small;width:460px" > 
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="font-size:small;">
+                <button type="button" class="btn  btn-secondary " style="font-size:small;">Newest</button>
+                <button type="button" class="btn  btn-outline-secondary text-white" style="font-size:small;">Active</button>
+                <button type="button" class="btn btn-outline-secondary text-white" style="font-size:small;">Bountied  <span class="badge bg-secondary">4</span></button>
+                <button type="button" class="btn btn-outline-secondary text-white" style="font-size:small;">Unanswered</button>
+              
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:small;">
+                    More
+                  </button>
+                  <ul class="dropdown-menu bg-secondary text-white"  aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item text-white " style="font-size:14px"  href="#">Frequent</a></li>
+                    <li><a class="dropdown-item text-white " style="font-size:14px"  href="#">Score</a></li>
+
+                    <li><a class="dropdown-item text-light mt-4 mb-4" style="font-size:14px"  href="#">Unanswered (my tags)</a></li>
+                    <li><a class="dropdown-item text-white mb-4" style="font-size:14px"  href="#">CUSTOME FILTERS</a></li>
+                  <li class="text-center" ><a class="dropdown-item text-white " style="font-size:13px;"  href="#">Save custom sorting</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button type="button" class="btn btn-outline-primary" style="font-size:small;">Filter</button>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+           <div class="user-section">
+              <% if user_signed_in? %>
+                   <% @posts.reverse_each do |post| %>
+                    <div class="container d-flex" style="width:752px;height: 105px;padding: 16px;">
+
+                    <div style="height: 108px;width: 108px;margin: 0 16px 4px 0;">
+                        <div class="post" style="font-size:small">
+                          <p>Likes <%= post.likes.count %></p>
+                          <p>Comments <%= post.postcomments.count %></p>
+                          <p>2 Views</p>
+                        </div>
+                    </div>
+                    <div style="font-size:small">
+                        <p style="font-size: 17px; text-decoration: none;">
+                          <%= link_to post.tittle, post_path(post), class: 'action-button text-decoration-none', style: "color: #d8ebfd" %>
+                        </p>
+                        <div class="d-flex justify-content-between">
+                          <p>buttons</p>
+                        <p>
+                          <img src='<%= asset_path("user.png") %>' style="width: 20px;" class="">
+                          <%= post.user.email.split('@')[0] %>
+                        </p>
+                      </div>
+                                              
+                    </div>
+                </div>
+                <hr>
+              <% end %>
+                
+              <% else %>
+                <h1 style="color: #4267B2;">Home Login</h1>
+
+                <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
+
+              <% end %>
+
+            </div>
+           
       </div>
-    <% else %>
-      <h1 style="color: #4267B2;">Home Login</h1>
-      <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
-    <% end %>
-  </div>
+      <div class="col-md-3 border border-danger">
+            <% if user_signed_in? %>
+                <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-link' %>
+
+            <% else %>
+                <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
+                <%= link_to 'Sign up', new_user_registration_path, class: 'action-button' %>
+            <% end %> 
       </div>
-    </div>
+   </div>
 
   </div> 
 </section>
