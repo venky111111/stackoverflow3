@@ -1,8 +1,8 @@
 <div class="container">
     <h1>Post Details</h1>
-
-    <h2><%= @post.content %></h2>
-    <p>By: <strong><%= @post.user.email %></strong></p>
+      <h2><%= @post.tittle %></h2>
+    <p><%= @post.content %></p>
+    <p>By: <strong><%= @post.user.email.split("@")[0] %></strong></p>
 
     <div class="comments-section">
       <h3>Comments:</h3>

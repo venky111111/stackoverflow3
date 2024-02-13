@@ -17,7 +17,7 @@
 </head>
 
 <body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark navvv border-bottom " id="position"  style="font-size:small;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark navvv border-bottom border-secondary" id="position"  style="font-size:small;">
     <div class="container">
       <div style="display:none">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +93,7 @@
         </li>
         <form class="d-flex bg-dark">
          
-            <input type="text" id="fname" class="rounded border border-light ms-3 bg-dark text-light" name="fname" placeholder="   Search..." style="width:700px;margin: 3px 0px;">
+            <input type="text" id="fname" class="rounded border border-secondary fw-bold text-white ms-3 bg-dark" name="fname" placeholder="   Search..." style="width:700px;margin: 3px 0px;">
 
         </form>
          
@@ -126,8 +126,8 @@
 <section class="bg-dark text-white">
    <div class="container">
     <div class="row">
-      <div class="col-md-2 mt-3" style="width: 220px;">
-        <div class=" " style=" ">
+      <div class="col-md-2 mt-3 flex-column align-items-stretch" style="width: 220px;">
+        <div class="" style=" ">
               <ul style="font-size:small;list-style-type: none;"  >
                 <li><button class="dropdown-item text-white fw-bold" type="button"><img src='<%= asset_path("home_1.png") %>' style="width: 18px;"class=" ">   Home</li>
                 <li><button class="dropdown-item text-white" type="button"><img src='<%= asset_path("faq.png") %>' style="width: 18px;">   Questions</li>
@@ -175,7 +175,7 @@
             </div>
 
       </div>
-      <div class="col-md-7 border border-warning m-0">
+      <div class="col-md-7 border-start border-secondary m-0">
         <div>
           <div class="d-flex  justify-content-between pt-5">
             <div>
@@ -183,10 +183,10 @@
             </div>
 
             <div> 
-              <%= link_to 'Ask Question', new_post_path, class: 'action-button btn btn-primary' %> 
+              <%= link_to 'Ask Question', new_post_path, class: 'action-button btn', style: 'background-color:#90c4f9'%> 
             </div>
           </div>
-          <div class="d-flex justify-content-around pt-5">
+          <div class="d-flex justify-content-between pt-5">
             <div>
               <h5><%= @posts.all.count%> Questions</h5>
             </div>
@@ -213,9 +213,6 @@
                 </div>
               </div>
             </div>
-            <div>
-              <button type="button" class="btn btn-outline-primary" style="font-size:small;">Filter</button>
-            </div>
           </div>
 
         </div>
@@ -223,21 +220,25 @@
            <div class="user-section">
               <% if user_signed_in? %>
                    <% @posts.reverse_each do |post| %>
-                    <div class="container d-flex" style="width:752px;height: 105px;padding: 16px;">
+                    <div class="container d-flex"  style="width:752px;height: 105px;padding: 16px;" >
 
-                    <div style="height: 108px;width: 108px;margin: 0 16px 4px 0;">
+                    <div style="height: 108px;width: 108px;margin: 0 16px 4px 0;" >
                         <div class="post" style="font-size:small">
-                          <p>Likes <%= post.likes.count %></p>
-                          <p>Comments <%= post.postcomments.count %></p>
-                          <p>2 Views</p>
+                          <p class="text-end"><%= post.likes.count %> vote</p>
+                          <p class="text-end"><%= post.postcomments.count %> answer</p>
+                          <p class="text-end">2 views</p>
                         </div>
                     </div>
-                    <div style="font-size:small">
-                        <p style="font-size: 17px; text-decoration: none;">
+                    <div style="font-size:small" class="text-start m-0">
+                        <h3 style="font-size: 17px; text-decoration: none;margin: -1.95px 0 5px;padding: 0 24px 0 0;height: 23px;width: 596px;">
                           <%= link_to post.tittle, post_path(post), class: 'action-button text-decoration-none', style: "color: #d8ebfd" %>
-                        </p>
-                        <div class="d-flex justify-content-between">
-                          <p>buttons</p>
+                        </h3>
+                        <div class="d-flex justify-content-between mt-4">
+                          <div>
+                          <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">ruby-on-rails</a>
+                          <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">angular</a>
+                        </div>
+
                         <p>
                           <img src='<%= asset_path("user.png") %>' style="width: 20px;" class="">
                           <%= post.user.email.split('@')[0] %>
@@ -248,8 +249,20 @@
                 </div>
                 <hr>
               <% end %>
-                
-              <% else %>
+                <%# <div class="btn-toolbar mt-5 mb-5" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group me-2" role="group" aria-label="Second group">
+    <button type="button" class="btn btn-outline-secondary text-white m-1 rounded"><</button>
+    <button type="button" class="btn btn-outline-secondary text-white active m-1 rounded">1</button>
+    <button type="button" class="btn btn-outline-secondary text-white m-1 rounded">2</button>
+    <button type="button" class="btn btn-outline-secondary text-white m-1 rounded">3</button>
+    <button type="button" class="btn btn-outline-secondary text-white m-1 rounded">></button>
+  </div>
+  
+</div> %> 
+<div class="mt-5 mb-5">
+  <h6>Looking for more? Browse the <span class="text-primary">complete list of questions</span>, <span class="text-primary">or popular tags</span>. Help us answer <span class="text-primary">unanswered questions.</span></h6>
+</div> 
+   <% else %>
                 <h1 style="color: #4267B2;">Home Login</h1>
 
                 <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
@@ -259,7 +272,7 @@
             </div>
            
       </div>
-      <div class="col-md-3 border border-danger">
+      <div class="col-md-3">
             <% if user_signed_in? %>
                 <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-link' %>
 
@@ -267,12 +280,198 @@
                 <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
                 <%= link_to 'Sign up', new_user_registration_path, class: 'action-button' %>
             <% end %> 
+            <div style="height: 503px; width: 300px;background-color: #413516;" class="border border-warning  ">
+                <div style="height: 42px; width: 298px;background-color: #6b5724;font-size: 12px;color: #f9fafa" class="align-middle">
+                <p class="fw-bold text-white p-2">The overflow blog</p>
+
+                </div>
+              
+                <p style="height:40px;width: 219px;font-size: small;" class="mx-auto mt-2">Building a PDF larger than the known universe</p>
+                <p style="height:40px;width: 219px;font-size: small;" class="mx-auto mt-2">Can a programming language implement time travel?</p>
+                <div style="height: 42px; width: 298px;background-color: #6b5724;font-size: 12px;color: #f9fafa" class="align-middle">
+                <p class="fw-bold text-white p-2">Feature on Meta</p>
+
+                </div>
+                <p style="height:40px;width: 219px;font-size: small;" class="mx-auto mt-2">What would you like to change about the moderator election process?</p>
+                <p style="height:40px;width: 219px;font-size: small;" class="mx-auto mt-2">Data Dumps Releases: Timeline Updates and Clarification?</p>
+                <div style="height: 42px; width: 298px;background-color: #6b5724;font-size: 12px;color: #f9fafa" class="align-middle">
+                <p class="fw-bold text-white p-2">Hot Meta Posts</p>
+
+                </div>
+                <p style="height:40px;width: 219px;font-size: small;" class="mx-auto mt-2">Is there a new wave of junk post and should I flag them as spam?</p>
+                <p style="height:40px;width: 219px;font-size: small;" class="mx-auto mt-2">Is it acceptable to fundamentally change own answer if it's incorrect?</p>
+      
+      
+            </div>
+            <div class="border border-secondary mt-4 rounded" style="width:300px;">
+                <div style="height:45px;background-color:#2d2e2f;padding: 12px 15px;" class="border-bottom border-secondary">
+                Custom Filters
+                </div>
+                <div style="height:50px;padding:4px 15px;" class="mt-3">
+                  <a href="" style="margin: 12px 0;" class="text-decoration-none">create a custom filter</a>
+                </div>
+            </div>
+            <div class="border border-secondary mt-4 rounded" style="width:300px;height: 210px;">
+                <div style="height:45px;background-color:#2d2e2f;padding: 12px 15px;" class="border-bottom border-secondary">
+                Watched Tags
+                </div>
+                <div style="width:210px;margin: -8px 29px;" class="mt-3 text-center mx-auto">
+                    <img src='<%= asset_path("search.png") %>' style="height: 45px;width: 45px;">
+                    <p style="font-size:small">Watch tags to curate your list of questions.</p>
+                    <button class="btn btn-outline-primary" style="color:#90c4f9;margin:0;padding: 5px;">watch a Tag</button>
+                </div>
+            </div>
+            <div class="border border-secondary mt-4 rounded" style="width:300px;">
+                <div style="height:45px;background-color:#2d2e2f;padding: 12px 15px;" class="border-bottom border-secondary d-flex justify-content-between">
+                <p>Ignored Tags</p>
+                <p>edit</p>
+                </div>
+                <div style="height:50px;padding:4px 15px;" class="mt-3">
+                 
+                  <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">snowflake-cloud-data-platform</a>
+                </div>
+            </div>
+            <div class="border border-secondary mt-4 rounded" style="width:300px;">
+                <div style="height:45px;background-color:#2d2e2f;padding: 12px 15px;" class="border-bottom border-secondary d-flex justify-content-between">
+                <p>Collectives</p>
+                <p class="text-primary">see all</p>
+                </div>
+                <div style="height:105px;padding:16px 15px;" class="mt-3 p-0 border-bottom border-secondary">
+                  <div class="d-flex justify-content-around m-0 p-0" >
+                    <img src='<%= asset_path("wso2.jpeg") %>' style="height: 30px;width: 30px;" class="bg-white rounded">
+                    <div style="font-size:small;margin: 0;">
+                      <h6>WSO2</h6>
+                      <p>7k members</p>
+                    </div>
+                    <div class="ms-4">
+                      <button class="btn btn-outline-primary">join</button>
+                    </div>
+
+                  </div >
+                  <p  style="font-size:small" class="text-center">WSO2 solutions give enterprises the flexibility to deploy applications and services on-...</p>
+                </div>
+                <div style="height:105px;padding:16px 15px;" class="mt-3 p-0 border-bottom border-secondary">
+                  <div class="d-flex justify-content-evenly m-0 p-0" >
+                    <img src='<%= asset_path("google.png") %>' style="height: 30px;width: 30px;" class="bg-white rounded">
+                    <div style="font-size:small;margin: 0;">
+                      <h6>Google Cloud</h6>
+                      <p>53k members</p>
+                    </div>
+                    <div class="ms-4">
+                      <button class="btn btn-outline-primary">join</button>
+                    </div>
+
+                  </div >
+                  <p  style="font-size:small" class="text-center">A collective for developers who utilize Google Cloud’s infrastructure and platform...</p>
+                </div>
+                <div style="height:105px;padding:16px 15px;" class="mt-3 p-0 ">
+                  <div class="d-flex justify-content-around m-0 p-0" >
+                    <img src='<%= asset_path("devops.png") %>' style="height: 30px;width: 30px;" class="bg-white rounded">
+                    <div style="font-size:small;margin: 0;">
+                      <h6>Devops</h6>
+                      <p>3k members</p>
+                    </div>
+                    <div class="ms-4">
+                      <button class="btn btn-outline-primary">join</button>
+                    </div>
+
+                  </div >
+                  <p  style="font-size:small" class="text-center">A collective where developers working with PHP can learn and connect about the open...</p>
+                </div>
+            </div>
+            <div style="width:300px" class="text-white mt-5 mb-5">
+              <h6>Hot Network Questions</h6>
+              <ul class="list-group bg-dark ">
+             
+                <li class="list-group-item bg-dark  text-primary" style="font-size:small"><img src='<%= asset_path("apple-touch-icon.png") %>' style="width: 20px;" class=" img-fluid">  
+                    Why can't the alien's particle shield be replicated despite using common elements?
+                </li>
+
+                 <li class="list-group-item bg-dark  text-primary" style="font-size:small"><img src='<%= asset_path("apple-touch-icon-2.png") %>' style="width: 20px;" class=" img-fluid"> 
+                    A simple find function with concepts
+              
+                </li>
+                 <li class="list-group-item bg-dark  text-primary" style="font-size:small"><img src='<%= asset_path("apple-touch-icon-3.png") %>' style="width: 20px;" class=" img-fluid">
+                    Did any MS-DOS program use the SYS REQ interrupt?
+                  
+                </li>
+                <li class="list-group-item bg-dark  text-primary" style="font-size:small"><img src='<%= asset_path("apple-touch-icon-4.png") %>' style="width: 20px;" class=" img-fluid">
+                    "I see" versus "oh really"
+                  
+                </li>
+                 <li class="list-group-item bg-dark  text-primary" style="font-size:small"><img src='<%= asset_path("apple-touch-icon-6.png") %>' style="width: 20px;" class=" img-fluid"> 
+                    A simple find function with concepts
+              
+                </li>
+                    
+                
+
+                
+              </ul>
+            </div>
       </div>
    </div>
 
   </div> 
 </section>
 
+<%# footer component on landing page  is start %>
+<section >
+  <footer>
+      <div class="container-fluid " style="background-color: #0c0d0e;">
+          <div class="row p-5">
+              <div class="col-md-1 text-white mt-3  text-end">
+                <img src='<%= asset_path("Stack_Overflow_icon.png") %>'  class="img-fluid" style="height: 48px;width: 48px;">
+              </div>
+             <div class="col-md-2 mt-3 text-white">
+                  <h4 class="" style="color:#c8ccd0;font-size:13px">STACK OVERFLOW</h4>
+                  <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Question</a><br>
+                  <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Help</a> 
+              </div>
+              <div class="col-md-2 mt-3 text-white">
+                <h4 class="" style="color:#c8ccd0;font-size:13px">PRODUCTS</h4>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Teams</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Advertising</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Collectives</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Talent</a><br>
+              </div>
+              <div class="col-md-2 mt-3 text-white">
+                <h4 class="" style="color:#c8ccd0;font-size:13px">COMPANY</h4>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">About</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Press</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">WorkHere</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Legal</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Privacy Policy</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Contact Us</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Cookie Policy</a><br>
+              </div>
+              <div class="col-md-2 mt-3 text-white">
+                <h4 class="" style="color:#c8ccd0;font-size:13px">STACK EXCHANGE NETWORK</h4>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Technology</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Culture & recreation</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Life & arts</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Science</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Professional</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Business</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none mt-5 pt-5">API</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none mt-5 pt-5">Data</a><br>
+              </div>
+              <div class="col-md-3  mt-3 ">
+                  <ul class="list-inline d-flex justify-content-evenly">
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Blog</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Facebook</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Instagram</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Twitter</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >LinkedIn</a>
+                  </ul>
+                  <div style="font-size:12px;color:#babfc5;" class="mt-5 pt-5">Site design / logo &copy; 2024 Stack Exchange Inc; user contributions licensed under <a href="#" >CC BY-SA.</a><span style="font-size:13px;color:#babfc5;">  rev 2024.2.8.4531</span></div>
+              </div>
+          </div>
+          
+      </div>
+  </footer>
+</section>
+<%# footer component on landing page  is end %>
 
 
 

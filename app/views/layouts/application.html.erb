@@ -10,10 +10,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-        <%= yield %>
-         <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+ <body>
+  <%= yield %>
 
-  </body>
+  <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+
+  <% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+</body>
+
 </html>
