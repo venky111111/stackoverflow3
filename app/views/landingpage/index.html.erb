@@ -613,15 +613,15 @@
     </div>
     <%# four cards container start in 6th component %>
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-1">
+        <div class="row row-cols-1 row-cols-md-4 g-2">
           <div class="col">
             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #e7700d;height: 30px;width: 47px;" class="rounded">Free</h2>
               </div>
-              <div class="card-body border text-dark text-start">
+              <div class="card-body text-dark text-start">
                 <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">Free</p>
+                  <p id="text" class=""  style="height:40px;margin: 0 0 6px; font-size:27px;">Free</p>
                   <p style="color:#a7adb4;font-size:15px" id="text2">No credit card required</p>
                 </div>
                 <div class="d-flex">
@@ -654,9 +654,9 @@
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #c8ccd0;height: 30px;width: 55px;" class="rounded text-dark">Basic</h2>
               </div>
-              <div class="card-body border text-dark text-start">
-                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">$6.50 USD</p>
+              <div class="card-body text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom">
+                  <p id="text" style="height:40px;margin: 0 0 6px; font-size:27px;">$6.50 USD</p>
                   <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
                 </div>
                  <div class="d-flex">
@@ -691,13 +691,19 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+             <div class="card" style="height: 595px;width: 310px;margin: -35px 0 0 0;">
               <div class="card-top">
-                <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #3b4045;height: 30px;width: 90px;" class="rounded">Business</h2>
+                <div style="background-color: #f1f2f3;height: 35px;width: 308px;padding: 0;" class=" border-bottom d-flex justify-content-between">
+                  <h6  id="text" class="text-dark m-0 p-2 text-start">RECOMMENDED</h6>
+                  <img src='<%= asset_path("dictionary.png") %>'  class="img-fluid m-2" style="width: 18px;height: 18px;"> 
+
+                </div>
+
+                <h2 id="text2" style="font-size:17px;margin:10px 0 17px 17px;padding: 4px 8px;background-color: #3b4045;height: 30px;width: 90px;" class="rounded">Business</h2>
               </div>
-              <div class="card-body border text-dark text-start">
-                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">$13.50 USD</p>
+              <div class="card-body text-dark text-start" style="padding: 15px;">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom ">
+                  <p id="text"  style="height:40px;margin: 0 0 6px; font-size:27px;">$13.50 USD</p>
                   <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
                 </div>
                 <div class="d-flex">
@@ -743,9 +749,9 @@
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #2b2d6e;height: 30px;width: 90px;" class="rounded">Enterprise</h2>
               </div>
-              <div class="card-body border text-dark text-start">
-                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">Custom pricing</p>
+              <div class="card-body  text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom">
+                  <p id="text" class="" style="height:40px;margin: 0 0 6px; font-size:27px;">Custom pricing</p>
                   <p style="color:#a7adb4;font-size:15px" id="text2">Let’s talk about what you need</p>
                 </div>
                 <div class="d-flex">
@@ -799,9 +805,9 @@
 
 
     <div style="margin-top:100px;width:1200px;" class="container">
-      <div class="row row-cols-1 row-cols-md-4 g-2 " >
+      <div class="row row-cols-1 row-cols-md-4 g-3 " >
         <div class="col">
-          <div class="card bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -810,7 +816,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -819,7 +825,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -828,7 +834,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:20px">
              
@@ -871,7 +877,7 @@
              <img src='<%= asset_path("illo-integrations-right.png") %>'  class="img-fluid  bg-dark"> 
           </div>
         </div>
-          <img src='<%= asset_path("teamss.png") %>'  class="img-fluid  bg-dark ms-5" style="width: 170px;">
+          <img src='<%= asset_path("teamss.png") %>'  class="img-fluid bg-dark  bg-dark ms-5" style="width: 170px;">
           
               <div style="height:50px;width:50px;margin-left: 1020px;" class="bg-primary rounded">
               </div>

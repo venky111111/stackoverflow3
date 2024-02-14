@@ -1,31 +1,22 @@
 class LikesController < ApplicationController
   before_action :set_post
- 
- 
- 
-  def index
 
-    if (@post.present? && @post.likes.exists?(user: current_user)) || (@postcomment.present? && @postcomment.likes.exists?(user: current_user))
-      destroy
-    else
-      create
-    end
-  end
-
-  def create
-   
+  def new
+       
     if params[:post_id]
       like_post
-    elsif  params[:postcomment_id]
+    elsif params[:postcomment_id]
       like_comment
     else
       
       redirect_back fallback_location: root_path, alert: 'Invalid like request.'
-    end
+    end  
   end
-
+def show
+  destroy
+end
   def destroy
-  
+
     if params[:post_id]
       unlike_post
     elsif params[:postcomment_id]
@@ -34,7 +25,7 @@ class LikesController < ApplicationController
       redirect_back fallback_location: root_path, alert: 'Invalid unlike request.'
     end
   end
-
+  
   private
 
   def set_post
@@ -61,7 +52,9 @@ class LikesController < ApplicationController
 
   def like_post
       @post = Post.find(params[:post_id])
+
       @like = @post.likes.create(user: current_user)
+
 
       if @like.persisted?
         @sender = @post.user
@@ -81,7 +74,8 @@ class LikesController < ApplicationController
       like.destroy
        redirect_back(fallback_location: posts_path, notice: 'Post unliked successfully')
     else
-      redirect_to posts_path(@post), alert: 'You have not liked this post.'
+      redirect_back(fallback_location: posts_path, notice: 'You have not liked this post.')
+
     end
   end
 

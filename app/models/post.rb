@@ -3,5 +3,6 @@ class Post < ApplicationRecord
   has_many :likes, as: :likeable, dependent: :destroy
    has_many :postcomments, dependent: :destroy
   validates :content,:tittle , presence: true
+  has_many :technologies;
 
 end

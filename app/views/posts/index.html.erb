@@ -235,11 +235,17 @@
                         </h3>
                         <div class="d-flex justify-content-between mt-4">
                           <div>
-                          <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">ruby-on-rails</a>
-                          <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">angular</a>
-                        </div>
+                            <% if post.technologies.any? %>
+                              <% post.technologies.each do |technology| %>
+                                <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none"><%= technology.name %></a>
+                              <% end %>
+                            <% else %>
+                              <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">No technologies</a>
+                            <% end %>
+                          </div>
 
-                        <p>
+
+                        <p>Asked
                           <img src='<%= asset_path("user.png") %>' style="width: 20px;" class="">
                           <%= post.user.email.split('@')[0] %>
                         </p>
