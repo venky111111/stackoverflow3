@@ -12,13 +12,15 @@
     #formm{border-radius: 8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);} 
     .but{width: 100%;max-width: 400px;}
     #txt{font-size:small;}
-    .navvv{border-top: 3px solid #d64933;}   
+    #navvv{border-top: 3px solid #d64933;}   
+
   </style>
 </head>
 
 <body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark navvv border-bottom border-secondary" id="position"  style="font-size:small;">
-    <div class="container">
+<%# navbar start %>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark  border-bottom border-secondary fixed-top" id="position"  style="font-size:small;" id="navvv">
+    <div class="container ">
       <div style="display:none">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
@@ -122,12 +124,14 @@
       
     </div>
     </div>
-  </nav>
-<section class="bg-dark text-white">
+</nav>
+<%# navbar end %>
+<section class="bg-dark text-white mt-5">
    <div class="container">
     <div class="row">
+      <%# aside bar start %>
       <div class="col-md-2 mt-3 flex-column align-items-stretch" style="width: 220px;">
-        <div class="" style=" ">
+        <div class=""  style=" position: sticky;top:50px;overflow-y: auto;overflow-x: hidden;">
               <ul style="font-size:small;list-style-type: none;"  >
                 <li><button class="dropdown-item text-white fw-bold" type="button"><img src='<%= asset_path("home_1.png") %>' style="width: 18px;"class=" ">   Home</li>
                 <li><button class="dropdown-item text-white" type="button"><img src='<%= asset_path("faq.png") %>' style="width: 18px;">   Questions</li>
@@ -135,7 +139,6 @@
                 <li class="mt-5"><button class="dropdown-item text-white "  type="button"><img src='<%= asset_path("bookmark.png") %>' style="width: 18px;" >   Saved</li>
                    <li class=""><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("user_1.png") %>' style="width: 18px;" >   Users</li>
                 <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("office.png") %>' style="width: 18px;" class="bg-light">   Companies</li>
-
                 <li class="mt-2">
                   <div class="d-flex"><p class="dropdown-item fw-bold text-white fw-bold" type="button">COLLECTIVES</p>
                     <h5>+</h5>
@@ -162,31 +165,25 @@
                 </li>
                 <li class="" >
                 <div class=" mx-auto"  style="width: 168px">
-                 
                   <div class="text-center">
-                 
-                  <a href="#" class="text-decoration-none mb-5 text-white" style="width: 168px;">Create free team</a>
-                  <button class="btn btn-outline-primary mt-3" style="width: 168px;font-size:small;">Look for your teams?</button>
+                    <a href="#" class="text-decoration-none mb-5 text-white" style="width: 168px;">Create free team</a>
+                    <button class="btn btn-outline-primary mt-3" style="width: 160px;font-size:small;">Look for your teams?</button>
                   </div>
-
-                </div></li>
-              
+                </div>
+                </li>
               </ul>
-            </div>
-
+          </div>
       </div>
-      <div class="col-md-7 border-start border-secondary m-0">
-        
+      <div class="col-md-7 border-start border-secondary m-0"> 
         <div class="d-flex  justify-content-between pt-5">
             <div>
               <h6 class="text-white"><%= @post.tittle %></h6>
             </div>
         </div>
-           <hr>
-          <div>
-            <div class="container d-flex"  style="width:752px;height: 105px;padding: 16px;" >
-
-                    <div style="height: 192px;width: 110px;margin: 0 15px 0 0;"  class="text-center">
+        <hr>
+        <div class=" border-bottom">
+            <div class="container d-flex "  style="width:752px;padding: 16px;" >
+                    <div style="height: 192px;width: 110px;margin: 0 15px 0 0;"  class="text-center ">
                            <%= link_to new_like_path(post_id: @post.id), method: :post, class: 'action-button' do %>
                             <%= image_tag asset_path("up_arr.png"), class: 'img-fluid', alt: 'Like' %>
                           <% end %>
@@ -196,22 +193,20 @@
                     <% end %>
                         <%= image_tag asset_path("bookmark.png"), class: 'img-fluid mt-1', alt: 'Like', style: "width:50%" %>
                         <%= image_tag asset_path("clock.png"), class: 'img-fluid mt-1', alt: 'Like', style: "width:50%" %>
-
                     </div>
-                    <div  class="text-start m-0">
-                        <p> <%= @a="" %>
+                    <div  class="text-start m-0 ">
                         <% lines = @post.content.split("\n") %>
-                        <%= lines[0] %><br>
-                        <div class="" style="background-color:#1d1b1b;margin: 0 0 20px;padding: 12px;">
-                        <% lines.each_with_index do |string, index| %>
-                          <% next if index == 0 %>
-                          <%= string %><br>
-                        <% end %>
-                        </div>
-                      
-                        </p>
-                        <div class="d-flex justify-content-between mt-4">
-                        <div>
+                          <%= lines[0] %><br>
+                          <% if lines.length > 1 %>
+                            <div class="" style="background-color:#1d1b1b;margin: 0 0 20px;padding: 12px;">
+                              <% lines.each_with_index do |string, index| %>
+                                <% next if index == 0 %>
+                                <%= string %><br>
+                              <% end %>
+                            </div>
+                          <% end %>
+                        <div class="d-flex justify-content-between mt-4 ">
+                          <div>
                             <% if @post.technologies.any? %>
                               <% @post.technologies.each do |technology| %>
                                 <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none"><%= technology.name %></a>
@@ -220,30 +215,86 @@
                               <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">No technologies</a>
                             <% end %>
                           </div>  
-
                         <p>Asked
                           <img src='<%= asset_path("user.png") %>' style="width: 20px;" class="">
                           <%= @post.user.email.split('@')[0] %>
                         </p>
-                      </div>
-                                            
-                    </div>
-                    
-                </div>
-                                          
-
+                      </div>                       
+                    </div> 
+              </div>
           </div>
-
-        
-     
-      </div>
+          <p><% @s=0 %></p>
+          <% @comments.each do |comment| %>
+          <h5 class="mt-5"></h5>
+          <div class="container d-flex mt-5 border-bottom border-secondary"  style="width:752px;padding: 16px;" >
+            <div class="row ">
+            <h4><%= @s=@s+1 %> Answer</h4>
+              <div class="col-md-2">
+              <div style="display: flex; flex-direction: column; margin: 0;padding: 0;" >
+                <%= link_to new_like_path(postcomment_id: comment.id), class: "action-button mx-auto" do %>
+                  <%= image_tag asset_path("arrow-up.png"), class: 'img-fluid bg-primary rounded-circle p-2 ', alt: 'Like', style: "width:45px" %><br>
+                <% end %>
+                <span class="mt-2 mb-2 fw-bold text-center"><%= comment.likes.count%></span>
+                <%= link_to like_path(postcomment_id: comment.id), method: :delete, class: 'action-button mx-auto' do %>
+                  <%= image_tag asset_path("arrow-down.png"), class: 'img-fluid bg-primary rounded-circle p-2 ', alt: 'Unlike', style: "width:45px" %><br>
+                <% end %>
+                <%= image_tag asset_path("bookmark.png"), class: 'img-fluid mt-2 mx-auto', alt: 'Like', style: "width:30px" %><br>
+                <%= image_tag asset_path("clock.png"), class: 'img-fluid mt-1 mx-auto', alt: 'Like', style: "width:30px" %><br>
+                </div>
+              </div>
+              <div class="col-md-10">
+                  <div  class="text-start m-0 " >
+                    <% lines = comment.content.split("\n") %>
+                    <%= lines[0] %><br>
+                    <% if lines.length > 1 %>
+                    <div class="" style="background-color:#1d1b1b;margin: 0 0 20px;padding: 12px;">
+                        <% lines.each_with_index do |string, index| %>
+                          <% next if index == 0 %>
+                          <%= string %><br>
+                        <% end %>
+                    </div>
+                    <% end %>
+                    <div class="d-flex justify-content-between mt-4">
+                      <div>
+                            <% if @post.technologies.any? %>
+                              <% @post.technologies.each do |technology| %>
+                                <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none"><%= technology.name %></a>
+                              <% end %>
+                            <% else %>
+                              <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">No technologies</a>
+                            <% end %>
+                      </div>  
+                      <div class="d-flex " style="">
+                        <p class="">Answered </p>
+                          <img src='<%= asset_path("user.png") %>' style="width: 20px;height: 20px;" class="mt-1">
+                          <%= comment.user.email.split('@')[0] %>
+                      </div>
+                    </div>                  
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <% end %>
+          <div>
+             <%= form_with(model: [@post, @comment], url: postcomments_path(@post), local: true) do |form| %>
+              <%= form.hidden_field :post_id, value: @post.id %>
+              <div class="p-3">
+                <%= form.label :content, "Your Answer", class: "fw-bold" %> 
+                <%= form.text_area :content, class: "form-control bg-dark border border-secondary text-white", id: "textArea", rows: 10 %>
+              </div>
+              <div class="buttons">
+                <%= form.submit "Post Your Answer", class: 'btn action-button mb-5 ms-3', style: 'background-color:#90c4f9' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
       <div class="col-md-3" style="margin-top:45px">
             <div> 
               <%= link_to 'Ask Question', new_post_path, class: 'action-button btn', style: 'background-color:#90c4f9'%> 
               <% if user_signed_in? %>
                 <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-link' %>
 
-            <% else %>
+                <% else %>
                 <%= link_to 'Sign in', new_user_session_path, class: 'action-button' %>
                 <%= link_to 'Sign up', new_user_registration_path, class: 'action-button' %>
             <% end %>
@@ -272,14 +323,7 @@
       
       
             </div>
-            <div class="border border-secondary mt-4 rounded" style="width:300px;">
-                <div style="height:45px;background-color:#2d2e2f;padding: 12px 15px;" class="border-bottom border-secondary">
-                Custom Filters
-                </div>
-                <div style="height:50px;padding:4px 15px;" class="mt-3">
-                  <a href="" style="margin: 12px 0;" class="text-decoration-none">create a custom filter</a>
-                </div>
-            </div>
+           
             <div class="border border-secondary mt-4 rounded" style="width:300px;height: 210px;">
                 <div style="height:45px;background-color:#2d2e2f;padding: 12px 15px;" class="border-bottom border-secondary">
                 Watched Tags
@@ -383,75 +427,7 @@
 
   </div> 
 </section>
-<section>
-  <div class="container">
-    <h1>Post Details</h1>
-      
-  
 
-
-
-
-    <p>By: <strong><%= @post.user.email.split("@")[0] %></strong></p>
-
-    <div class="comments-section">
-      <h3>Comments:</h3>
-      <% @comments.each do |comment| %>
-        <div class="comment">
-          <p><strong><%= comment.user.email %>:</strong> <%= comment.content %></p>
-          <p><strong>Likes ( <%= @comment_likes_counts[comment.id] || 0 %> )</strong></p>
-      
-        
-               <%= link_to 'Like Comment', new_like_path(postcomment_id: comment.id), class: 'btn btn-primary' %><br>
-         
-             <%= link_to 'Unlike Comment', like_path(postcomment_id: comment.id), method: :delete, class: 'btn btn-primary' %> 
-          
-      
-        </div>
-      <% end %>
-      
-
-      <%= link_to 'Like Post', new_like_path(post_id: @post.id),method: :post_id, class: 'action-button' %>
-               
-         
-
-
- 
-  <p id="hii"><%= @post.likes.count %></p>
-</div>
-<script>
-  let m = <%= @post.likes.count %>; // Declaring m here for the first time
-
-
-  function fun() {
-    if (m >=0) {
-      m=m-1;
-      document.getElementById("hii").innerHTML = m;
-    } else {
-      hah.innerHTML = m; // This is redundant, but I've left it as per your original logic.
-    }
-    console.log(m);
-  }
-</script>
-
-
-
-  
-  <%= form_with(model: [@post, @comment], url: postcomments_path, local: true) do |form| %>
-    <%= form.hidden_field :post_id, value: @post.id %>
-
-    <div>
-      <%= form.label :content %><br>
-      <%= form.text_area :content, rows: 3 %>
-    </div>
-  
-    <div class="buttons">
-      <%= form.submit "Add Comment", class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-  
-    <%= link_to 'Back to Home', posts_path, class: 'btn btn-primary back-btn' %>
-</section>
 <%# footer component on landing page  is start %>
 <section >
   <footer>

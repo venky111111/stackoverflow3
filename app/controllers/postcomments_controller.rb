@@ -16,11 +16,11 @@ class PostcommentsController < ApplicationController
   
 
   
-    def destroy
-      @comment = Postcomment.find(params[:id])
-      @comment.destroy
-      redirect_to @comment.post, notice: 'Comment deleted successfully.'
-    end
+    # def destroy
+    #   @comment = Postcomment.find(params[:id])
+    #   @comment.destroy
+    #   redirect_to @comment.post, notice: 'Comment deleted successfully.'
+    # end
   
     private
   

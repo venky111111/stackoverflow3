@@ -8,7 +8,6 @@ class LikesController < ApplicationController
     elsif params[:postcomment_id]
       like_comment
     else
-      
       redirect_back fallback_location: root_path, alert: 'Invalid like request.'
     end  
   end

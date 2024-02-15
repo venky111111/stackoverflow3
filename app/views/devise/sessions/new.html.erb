@@ -34,11 +34,9 @@
 <body class="bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-white navvv border-bottom"  style="font-size:small;">
     <div class="container">
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon "></span>
-      </button>
-    
+      </button> 
       <div class="dropdown ">
       <i class="fa fa-navicon ms-4" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:24px" onclick="side()"></i>
       <i class="fa fa-remove ms-4" id="remove" style="display: none;font-size:24px" onclick="sideR()"></i>
@@ -60,12 +58,12 @@
 
     </div>
   
-<img src='<%= asset_path("logo-stackoverflow.png") %>' style="width: 10%;" class="ms-4">
+    <img src='<%= asset_path("logo-stackoverflow.png") %>' style="width: 10%;" class="ms-4">
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto  mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active ms-3" href="#">Abosut</a>
+          <a class="nav-link active ms-3" href="#">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active ms-2" href="#">Products</a>
@@ -78,14 +76,14 @@
             <input type="text" id="fname" class="rounded border-1  ms-3 " name="fname" placeholder="   Search..." style="width:700px;margin: 3px 0px;">
 
         </form>
-           <button class="btn btn-outline-primary ms-2 rounded btn-sm  mt-1 mb-1" ><%= link_to 'Log in', new_user_session_path  %></button>
-          <button class="btn btn-primary btn-sm ms-2 rounded btn-sm  mt-1 mb-1" >Sign up</button>
+           <%= link_to 'Log in', new_user_session_path, class: 'btn btn-outline-primary ms-2 rounded btn-sm  mt-1 mb-1 text-decoration-none'  %>
+           <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-primary btn-sm ms-2 rounded btn-sm  mt-1 mb-1', id: "txt" %>
 
       </ul>
       
     </div>
-  </div>
-</nav>
+    </div>
+  </nav>
 <section class="container mt-5 " >
   <div class=" mx-auto mt-3 d-flex justify-content-center but">
   <img src="<%= asset_path("Stack_Overflow_icon.png") %>" style="width:50px;" class="">

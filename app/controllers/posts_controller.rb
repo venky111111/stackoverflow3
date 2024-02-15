@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
 
 def index
     @posts = Post.all
@@ -9,11 +10,6 @@ def index
     @post = Post.find(params[:id])
     @comments = @post.postcomments.includes(:user)
     @comment = Postcomment.new 
-
-    @comment_likes_counts = {}
-    @comments.each do |comment|
-      @comment_likes_counts[comment.id] = comment.likes.count
-    end
   end
 
   def destroy
