@@ -23,8 +23,8 @@
         height: 850px;
         width: 520px;
         position: absolute;
-        top: 58vmax;
-        left: 14vmax;
+        top: 52vmax;
+        left: 16vmax;
         right: 0;
         bottom: 0;
         padding: 48px 0;
@@ -34,14 +34,12 @@
         background: linear-gradient(180deg, rgba(248,249,254,1) 3%, rgba(255,141,9,1) 96%);
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-       
     }
-
         #cards_22{
           height: 850px;
         width: 520px;
           position: absolute;
-          top:58vmax;
+          top:52vmax;
           left:51vmax;
           right: 0;
           bottom: 0;
@@ -53,10 +51,10 @@
         }
         #cards_3{
            height: 350px;
-           width: 450px;
+           width: 500px;
           position: absolute;
-          top: 140vmax;
-          left: 34vmax;
+          top: 126vmax;
+          left: 35vmax;
           right: 0;
         }
         #cardanim:hover{-ms-transform: scale(1.5); -webkit-transform: scale(1.5);transform: scale(1.5); }
@@ -150,14 +148,30 @@
   </nav>
   <%# navbar component on landing page is end %>
   <%# second and third components on landing page is start%>
-  <section class="container " >
+  <div class="bg-secondary rounded" style="height:48px;width:70px;position: absolute;margin-left: 180px;"> </div>
+
+   <div class="bg-primary rounded-start" style="height:48px;width:70px;position: absolute;margin-left: 1200px;"> </div>
+
+  <section class="container">
+
     <%# second component on landing page is start %>
-    <div class=" mt-5 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
+    <div class=" m-0 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
+      
       <div class="container mt-5 g-0">
+
         <div class="row  p-1 g-0">
-          <div class=" col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
+
+          <div class=" col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex mt-5">
+            <div>
+            <div class="bg-warning rounded-start mt-3 mb-0 p-0" style="height: 30px;width: 30px;margin-left:0px;">
+            </div>
+             <div class="bg-danger rounded-end mt-0 p-0" style="height: 30px;width: 30px;margin-left:30px;">
+            </div>
+          </div>
             <div id="dec_img-1">
-            <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;margin-top:100px ;" class="img-fluid  ">
+           
+            <img src='<%= asset_path("illo-code.png") %>' style="width: 130px;margin-top:100px" class="img-fluid">
+
             </div>
             <div class="card bg-dark mx-auto  mb-3" style="height: 250px;" id="card-1">
               <div class="card-body" style="background-color: #f7d5b2; border-radius: 15px;">
@@ -168,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3 d-flex mt-5">
             <div class="card bg-dark " style="height: 250px;" id="card-1">
               <div class="card-body" style="background-color: #a8c3e0; border-radius: 15px;">
               <img src='<%= asset_path("lock.png") %>' style="width: 50px;" class="img-fluid rounded-start mt-2">
@@ -177,7 +191,8 @@
               </div>
             </div>
             <div id="dec_img-1">
-            <img src="https://cdn.sstatic.net/Img/home/illo-code.svg?v=a44cdec68cbc" style="width: 130px;" class="img-fluid ">
+            <img src='<%= asset_path("illo-code.png") %>' style="width: 130px;" class="img-fluid">
+
             </div>
           </div>
         </div>
@@ -195,7 +210,7 @@
           <div class="col">
             <div class="card h-100 w-80 border-0" id="cards_4" style="background-color:black">
               <div class="card-body ">
-                <h5 class="card-title" id="text">100+ milslion</h5>
+                <h5 class="card-title" id="text">100+ million</h5>
                 <p class="card-text" style="color:#A7ADB4" id="text2">monthly visitors to Stack Overflow & Stack Exchange</p>
               </div>  
             </div>
@@ -225,7 +240,17 @@
             </div>
           </div>
         </div>
-      </div>
+
+      </div>  
+          <div class="d-flex justify-content-between">
+              <div class="mt-5 pt-5 ms-4">
+                <div class="bg-success rounded-start ms-1" style="height:20px;width:20px"></div>
+                <div class="bg-info ms-4 rounded-end" style="height:20px;width:20px;"></div>
+              </div>
+              <div class="mt-5 pt-5 me-4">
+                <div class="bg-info rounded-start me-4 " style="height:20px;width:20px"></div>
+              </div>
+          </div>
         <script>
             let a = ["Developer", "Data Scientist", "System Admin", "Mobile Developer", "Game Developer"];
             let hiElement = document.getElementById('hi');
@@ -275,7 +300,7 @@
             <h2 id="text" style="width: 425px;height: 105px;margin: 0 48px 12px; font-size:27px">A private collaboration & knowledge sharing SaaS platform for companies</h2>
           </div>
           <div>
-              <p id="text2" style="width: 425px;height: 85px;margin: 0 48px 32px; font-size:19px" class="border border-dark">A web-based platform to increase productivity, decrease cycle times, accelerate time to market, and protect institutional knowledge.</p>
+              <p id="text2" style="width: 425px;height: 85px;margin: 0 48px 32px; font-size:19px">A web-based platform to increase productivity, decrease cycle times, accelerate time to market, and protect institutional knowledge.</p>
           </div>
           <div style="width: 210px; height: 17px;margin: 0 154px 12px 154px;" class="d-flex flex-row justify-content-center">
             <div style="width: 50px" class=""><hr></div>
@@ -332,21 +357,21 @@
   <div class=" bg-warning rounded-end" style="height: 50px; width: 60px;margin-left:59px ;">
   </div>
   <%# five and sixth conpmanents on landing page is start %>
-<section class="container "> 
-    <div class="row row-cols-1 row-cols-md-3 g-0  mx-auto border border-dark d-flex" style="width: 70%;">
+<section class="container"> 
+    <div class="row row-cols-1 row-cols-md-3 g-0  mx-auto d-flex " style="width: 70%;">
       <div class="col">
         <div class="card ">
-        <img src='<%= asset_path("illo-question.png") %>' style="width: 100%;height: 80%;" class="img-fluid rounded-start d-block ">
+        <img src='<%= asset_path("illo-question.png") %>' style="width: 100%;height: 80%;" class="img-fluid d-block shadow">
         </div>
       </div>
       <div class="col ">
         <div class="card ">
-        <img src='<%= asset_path("illo-for-you.png") %>' style="width: 100%;height: 80%;margin-left:300px ;" class="img-fluid rounded-start d-block ">    
+        <img src='<%= asset_path("illo-for-you.png") %>' style="width: 100%;height: 80%;margin-left:310px ;" class="img-fluid d-block shadow">    
         </div>
       </div>
       <div class="col">
         <div class="card" id="cards_3">
-        <img src='<%= asset_path("illo-home-search.png") %>'  class="img-fluid rounded-start d-block ">    
+        <img src='<%= asset_path("illo-home-search.png") %>'  class="img-fluid rounded shadow d-block ">    
         </div>
       </div>
     </div>
@@ -603,25 +628,28 @@
         .slider.round {border-radius: 34px;}
         .slider.round:before {border-radius: 50%;}
     </style>
+</head>
+<body>
     <div class="d-flex container" style="margin:0 10px 20px;">
-        <p id="text2" style="font-size: 15px;" class="me-2">Annual billing dicount</p>
-
+        <p id="text2" style="font-size: 15px;" class="me-2">Annual billing discount</p>
         <label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round" ></span>
+            <input type="checkbox" id="mySwitch" checked>
+            <span class="slider round"></span>
         </label>
     </div>
+
+    
     <%# four cards container start in 6th component %>
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-1">
+        <div class="row row-cols-1 row-cols-md-4 g-2">
           <div class="col">
             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #e7700d;height: 30px;width: 47px;" class="rounded">Free</h2>
               </div>
-              <div class="card-body border text-dark text-start">
+              <div class="card-body text-dark text-start">
                 <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">Free</p>
+                  <p id="text" class=""  style="height:40px;margin: 0 0 6px; font-size:27px;">Free</p>
                   <p style="color:#a7adb4;font-size:15px" id="text2">No credit card required</p>
                 </div>
                 <div class="d-flex">
@@ -654,9 +682,11 @@
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #c8ccd0;height: 30px;width: 55px;" class="rounded text-dark">Basic</h2>
               </div>
-              <div class="card-body border text-dark text-start">
-                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">$6.50 USD</p>
+              <div class="card-body text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom">
+                  <p  style="height:40px;margin: 0 0 6px; font-size:27px;font-family: 'Roboto Slab';font-weight: bold;" id="price1">$6.50 USD</p>
+                  <p  style="height:40px;margin: 0 0 6px; font-size:27px;display: none;font-family: 'Roboto Slab';font-weight: bold;" id="price2">$7.70 USD</p>
+
                   <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
                 </div>
                  <div class="d-flex">
@@ -691,13 +721,21 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+             <div class="card" style="height: 595px;width: 310px;margin: -35px 0 0 0;">
               <div class="card-top">
-                <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #3b4045;height: 30px;width: 90px;" class="rounded">Business</h2>
+                <div style="background-color: #f1f2f3;height: 35px;width: 308px;padding: 0;" class=" border-bottom d-flex justify-content-between">
+                  <h6  id="text" class="text-dark m-0 p-2 text-start">RECOMMENDED</h6>
+                  <img src='<%= asset_path("dictionary.png") %>'  class="img-fluid m-2" style="width: 18px;height: 18px;"> 
+
+                </div>
+
+                <h2 id="text2" style="font-size:17px;margin:10px 0 17px 17px;padding: 4px 8px;background-color: #3b4045;height: 30px;width: 90px;" class="rounded">Business</h2>
               </div>
-              <div class="card-body border text-dark text-start">
-                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">$13.50 USD</p>
+              <div class="card-body text-dark text-start" style="padding: 15px;">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom ">
+                  <p id="price3"  style="height:40px;margin: 0 0 6px; font-size:27px;font-family: 'Roboto Slab';font-weight: bold;">$13.50 USD</p>
+                  <p id="price4"  style="height:40px;margin: 0 0 6px; font-size:27px;font-family: 'Roboto Slab';font-weight: bold;display: none;">$15.40 USD</p>
+
                   <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
                 </div>
                 <div class="d-flex">
@@ -732,7 +770,7 @@
                   <p class="text2" style="font-size: 15px;"  class="mt-2 border border-dark">Usage and adoption metrics  Collections</p>
                 </div>
                 <div  class="text-center mt-1">
-                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white">Get started</a>
+                    <a href="#" style="height: 43px;margin: 50px 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white mt-5">Get wdstarted</a>
                 </div>
                   <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
               </div>   
@@ -743,9 +781,9 @@
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #2b2d6e;height: 30px;width: 90px;" class="rounded">Enterprise</h2>
               </div>
-              <div class="card-body border text-dark text-start">
-                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom border-danger">
-                  <p id="text" class="border border-dark " style="height:40px;margin: 0 0 6px; font-size:27px;">Custom pricing</p>
+              <div class="card-body  text-dark text-start">
+                <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom">
+                  <p id="text" class="" style="height:40px;margin: 0 0 6px; font-size:27px;">Custom pricing</p>
                   <p style="color:#a7adb4;font-size:15px" id="text2">Let’s talk about what you need</p>
                 </div>
                 <div class="d-flex">
@@ -794,14 +832,49 @@
         </div>
       </div>
       <%# four cards container end in 6th component %>
+      <script>
+         let c1=document.getElementById("price1");
+      let c2=document.getElementById("price2");
+       let c3=document.getElementById("price3");
+      let c4=document.getElementById("price4");
 
-      <%# four cards container start in 6th component %>
+        function onFunction() {
+            console.log('Switch turned ON!');
+              c1.style.display="block";
+              c2.style.display="none";
+              c3.style.display="block";
+              c4.style.display="none";
+        }
+        function offFunction() {
+            console.log('Switch turned OFF!');
+
+            c1.style.display="none";
+            c2.style.display="block";
+            c3.style.display="none";
+            c4.style.display="block";
+
+        }
+
+        // Function to handle toggle events
+        function toggleSwitch() {
+            if (this.checked) {
+                onFunction();
+            } else {
+                offFunction();
+            }
+        }
+
+        // Attaching the toggleSwitch function to the click event of the switch
+        document.getElementById("mySwitch").addEventListener("click", toggleSwitch);
+    </script>
+
+      <%# four cards containers-2 start in 6th component %>
 
 
     <div style="margin-top:100px;width:1200px;" class="container">
-      <div class="row row-cols-1 row-cols-md-4 g-2 " >
+      <div class="row row-cols-1 row-cols-md-4 g-3 " >
         <div class="col">
-          <div class="card bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -810,7 +883,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -819,7 +892,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:24px">
              
@@ -828,7 +901,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="card  bg-dark border border-light" style="background-color:#0C0D0E;">
+          <div class="card  bg-dark border border-secondary" style="background-color:#0C0D0E;">
            
             <div class="card-body" style="padding:20px">
              
@@ -871,7 +944,7 @@
              <img src='<%= asset_path("illo-integrations-right.png") %>'  class="img-fluid  bg-dark"> 
           </div>
         </div>
-          <img src='<%= asset_path("teamss.png") %>'  class="img-fluid  bg-dark ms-5" style="width: 170px;">
+          <img src='<%= asset_path("teamss.png") %>'  class="img-fluid bg-dark  bg-dark ms-5" style="width: 170px;">
           
               <div style="height:50px;width:50px;margin-left: 1020px;" class="bg-primary rounded">
               </div>
@@ -948,7 +1021,6 @@
           var container = document.getElementById('seventh');
           var containerTop = container.getBoundingClientRect().top;
           var currentScrollPos = window.pageYOffset;
-        console.log("containerTop", containerTop, "currentScrollPos", currentScrollPos);
           if (currentScrollPos >=5230 || currentScrollPos<=4700) {
             // Scrolling down
             container.style.display = 'none';
@@ -1105,16 +1177,16 @@
         <div class="col" style="width: 25%;" id="tenth_side_img">
           <div class="card   border-0" style="width:316px;height:464px;margin: 40px 3px;background-color: #0c3b6a ;background-image: url('<%= asset_path('illo-se.png') %>')">
             <div class="d-flex">
-               <img src='<%= asset_path("apple-touch-icon.png") %>'  class="img-fluid bg-white rounded" style="height: 128px;width: 128px;margin: 24px;padding: 16px;">
-                <img src='<%= asset_path("apple-touch-icon-1.png") %>'  class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
+               <img src='<%= asset_path("apple-touch-icon.png") %>' id ="ninth" class="img-fluid bg-white rounded" style="height: 128px;width: 128px;margin: 24px;padding: 16px;">
+                <img src='<%= asset_path("apple-touch-icon-1.png") %>' id="ninth" class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
             </div>
             <div class="d-flex">
-               <img src='<%= asset_path("apple-touch-icon-2.png") %>'  class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
-                <img src='<%= asset_path("apple-touch-icon-3.png") %>'  class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
+               <img src='<%= asset_path("apple-touch-icon-2.png") %>' id="ninth" class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
+                <img src='<%= asset_path("apple-touch-icon-3.png") %>' id="ninth" class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
             </div>
             <div class="d-flex">
-               <img src='<%= asset_path("apple-touch-icon-4.png") %>'  class="img-fluid bg-white rounded" style="height: 128px;width: 128px;margin: 24px;padding: 16px;">
-                <img src='<%= asset_path("apple-touch-icon-5.png") %>'  class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
+               <img src='<%= asset_path("apple-touch-icon-4.png") %>' id="ninth" class="img-fluid bg-white rounded" style="height: 128px;width: 128px;margin: 24px;padding: 16px;">
+                <img src='<%= asset_path("apple-touch-icon-5.png") %>' id="ninth" class="img-fluid bg-white rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
             </div>
           </div>
         </div>
@@ -1133,6 +1205,7 @@
             </div>
           </div>
         </div>
+
         <div class="col" style="width:25%" id="tenth_side_img">
             
             <div class="card border-0" style="width:316px;height:464px;margin: 40px 3px;background-color: #0c3b6a ;background-image: url('<%= asset_path('illo-se.png') %>')">
@@ -1225,7 +1298,7 @@
                     <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Twitter</a> 
                     <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >LinkedIn</a>
                   </ul>
-                  <div style="font-size:12px;color:#babfc5;" class="border mt-5 pt-5">Site design / logo &copy; 2024 Stack Exchange Inc; user contributions licensed under <a href="#" >CC BY-SA.</a><span style="font-size:13px;color:#babfc5;">  rev 2024.2.8.4531</span></div>
+                  <div style="font-size:12px;color:#babfc5;" class="mt-5 pt-5">Site design / logo &copy; 2024 Stack Exchange Inc; user contributions licensed under <a href="#" >CC BY-SA.</a><span style="font-size:13px;color:#babfc5;">  rev 2024.2.8.4531</span></div>
               </div>
           </div>
           

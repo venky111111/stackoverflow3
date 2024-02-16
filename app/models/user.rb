@@ -9,4 +9,9 @@ class User < ApplicationRecord
     end
     
   end
+
+  has_many :post
+  has_many :postcomments
+  has_many :likes, as: :likeable
+
 end

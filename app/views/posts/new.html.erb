@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Formatting</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+<style>
+    .btn-group {
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body class="bg-dark">
+   <%# navbar component on landing page is start %>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white border-bottom border-secondary" style="font-size:small;">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="dropdown ">
+        <i class="fa fa-navicon ms-4" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:24px" onclick="side()"></i>
+        <i class="fa fa-remove ms-4" id="remove" style="display: none;font-size:24px" onclick="sideR()"></i>
+        <script>
+          function side() {
+          document.getElementById("remove").style.display = "block";
+          document.getElementById("dropdownMenu2").style.display = "none";
+          }
+          function sideR(){
+          document.getElementById("remove").style.display = "none";
+          document.getElementById("dropdownMenu2").style.display = "block";
+          }
+      </script>
+      <ul class="dropdown-menu mt-3 bg-dark border border-secondary" aria-labelledby="dropdownMenu2" style="width:210px; font-size: small;">
+        <li><button class="dropdown-item text-white fw-bold" type="button"><img src='<%= asset_path("home_1.png") %>' style="width: 18px;"class=" ">   Home</li>
+                <li><button class="dropdown-item text-white" type="button"><img src='<%= asset_path("faq.png") %>' style="width: 18px;">   Questions</li>
+                <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("add_1.png") %>' style="width: 18px;">   Tags</li>
+                <li class="mt-5"><button class="dropdown-item text-white "  type="button"><img src='<%= asset_path("bookmark.png") %>' style="width: 18px;" >   Saved</li>
+                   <li class=""><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("user_1.png") %>' style="width: 18px;" >   Users</li>
+                <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("office.png") %>' style="width: 18px;" class="bg-light">   Companies</li>
+
+                <li class="mt-2">
+                  <div class="d-flex"><p class="dropdown-item fw-bold text-white fw-bold" type="button">COLLECTIVES</p>
+                    <h5>+</h5>
+                  </div>
+                </li> 
+                <li class=""><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("star-2.png") %>' style="width: 18px;" class="">Explore collectives
+                </li>
+                <li class="mt-2">
+                  <div class="d-flex"><p class="dropdown-item fw-bold text-white" type="button">LABS</p>
+                       <i class="fa fa-info-circle mt-2" style="font-size:15px"></i> 
+                  </div>
+                </li>
+                 <li><button class="dropdown-item text-white " type="button"><img src='<%= asset_path("chat_1.png") %>' style="font-size:15px; width: 20px;"> Discussions
+                 </li>
+                 <li class="mt-2">
+                  <div class=""><p class="dropdown-item fw-bold" type="button">COLLECTIVES</p>
+                    
+                  </div>
+                </li>
+                <li class="mt-2">
+                  <div class="d-flex"><p class="dropdown-item fw-bold text-white fw-bold" type="button">TEAMS</p>
+                    <h5>+</h5>
+                  </div>
+                </li>
+                <li class="" >
+                <div class=" mx-auto"  style="width: 168px">
+                 
+                  <div class="text-center">
+                 
+                  <a href="#" class="text-decoration-none mb-5 text-white" style="width: 168px;">Create free team</a>
+                  <button class="btn btn-outline-primary mt-3" style="width: 168px;font-size:small;">Look for your teams?</button>
+                  </div>
+
+                </div></li>
+      </ul>
+    </div>
+    <img src='<%= asset_path("logo-meta.png") %>' style="width: 150px;" class="ms-4 bg-dark">
+    <div class="collapse navbar-collapse e" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto  mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link active ms-2 text-light" href="#">Products</a>
+        </li>
+        <form class="d-flex bg-dark">
+         
+            <input type="text" id="fname" class="rounded border border-secondary fw-bold text-white ms-3 bg-dark" name="fname" placeholder="   Search..." style="width:700px;margin: 3px 0px;">
+
+        </form>
+         
+         <li class="nav-item">
+          <div class="dropdown">
+            <img src='<%= asset_path("user_3.png") %>' style="width: 30px;" class="ms-4 mt-1 dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+
+              
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <% if user_signed_in? %>
+                <li><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'dropdown-item' %></li>
+
+                <% else %>
+                <li><%= link_to 'Sign in', new_user_session_path, class: 'action-button dropdown-item' %></li>
+                <li><%= link_to 'Sign up', new_user_registration_path, class: 'action-button dropdown-item' %></li>
+                <% end %>
+                
+              </ul>
+            </div>
+
+         </li>
+         <li class="nav-item">
+            <img src='<%= asset_path("message_1.png") %>' style="width: 30px;" class="ms-4 mt-1">
+            
+         </li>
+          <li class="nav-item">
+            <img src='<%= asset_path("achivement.png") %>' style="width: 30px;" class="ms-4 mt-1">
+            
+         </li>
+          <li class="nav-item">
+            <img src='<%= asset_path("question_1.png") %>' style="width: 30px;" class="ms-4 mt-1">
+            
+         </li>
+          <li class="nav-item">
+            <img src='<%= asset_path("stack-exchange.png") %>' style="width: 30px;" class="ms-4 mt-1 bg-secondary rounded">
+            
+         </li>
+
+
+      </ul>
+      
+    </div>
+    </div>
+  </nav>
+  <%# navbar component on landing page is end %>
+<div class="container text-white mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="<%= posts_path %>" method="post">
+                <h3 class="mt-5 mb-5">Review your question</h3>
+                
+                <%= form_with(model: @post, url: posts_path, method: :post) do |form| %>
+                    <div style="width: 850px;height: 124px;background-color: #1a1815;" class="border border-secondary mb-3">
+                      <div class="p-3">
+                        <%= form.label :Title, class: "fw-bold" %>
+                        <p class="m-0 p-0 text-secondary mb-2" style="font-size:small">Be specific and imagine you’re asking a question to another person.</p>
+                        <%= form.text_area :tittle, class: "form-control bg-dark border border-secondary text-white", id: "textArea", rows: 1 %>
+                      </div>
+                    </div>
+                    <div style="width: 850px;height: 347px;background-color: #1a1815;" class="border border-secondary mb-3 Disabled">
+                      <div class="p-3">
+                        <%= form.label :content, "What are the details of your problem?", class: "fw-bold" %>
+                        <p class="m-0 p-0 text-light mb-2" style="font-size:small">Introduce the problem and expand on what you put in the title. Minimum 20 characters.</p>
+                        <%= form.text_area :content, class: "form-control bg-dark border border-secondary text-white", id: "textArea", rows: 10 %>
+                      </div>
+                    </div>
+                    <div >
+                        <%= form.submit 'Create Post', style:"background-color:#90c4f9;padding: 11px;", class: "rounded btn" %>
+                    </div>
+                <% end %>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%# footer component on landing page  is start %>
+<section >
+  <footer>
+      <div class="container-fluid " style="background-color: #0c0d0e;">
+          <div class="row p-5">
+              <div class="col-md-1 text-white mt-3  text-end">
+                <img src='<%= asset_path("Stack_Overflow_icon.png") %>'  class="img-fluid" style="height: 48px;width: 48px;">
+              </div>
+             <div class="col-md-2 mt-3 text-white">
+                  <h4 class="" style="color:#c8ccd0;font-size:13px">STACK OVERFLOW</h4>
+                  <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Question</a><br>
+                  <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Help</a> 
+              </div>
+              <div class="col-md-2 mt-3 text-white">
+                <h4 class="" style="color:#c8ccd0;font-size:13px">PRODUCTS</h4>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Teams</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Advertising</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Collectives</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Talent</a><br>
+              </div>
+              <div class="col-md-2 mt-3 text-white">
+                <h4 class="" style="color:#c8ccd0;font-size:13px">COMPANY</h4>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">About</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Press</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">WorkHere</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Legal</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Privacy Policy</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Contact Us</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Cookie Policy</a><br>
+              </div>
+              <div class="col-md-2 mt-3 text-white">
+                <h4 class="" style="color:#c8ccd0;font-size:13px">STACK EXCHANGE NETWORK</h4>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Technology</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Culture & recreation</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Life & arts</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Science</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Professional</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none">Business</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none mt-5 pt-5">API</a><br>
+                <a href="#" style="color:#babfc5;font-size:13px" class="text-decoration-none mt-5 pt-5">Data</a><br>
+              </div>
+              <div class="col-md-3  mt-3 ">
+                  <ul class="list-inline d-flex justify-content-evenly">
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Blog</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Facebook</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Instagram</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Twitter</a> 
+                    <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >LinkedIn</a>
+                  </ul>
+                  <div style="font-size:12px;color:#babfc5;" class="mt-5 pt-5">Site design / logo &copy; 2024 Stack Exchange Inc; user contributions licensed under <a href="#" >CC BY-SA.</a><span style="font-size:13px;color:#babfc5;">  rev 2024.2.8.4531</span></div>
+              </div>
+          </div>
+          
+      </div>
+  </footer>
+</section>
+<%# footer component on landing page  is end %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
