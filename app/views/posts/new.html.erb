@@ -82,7 +82,7 @@
     <img src='<%= asset_path("logo-meta.png") %>' style="width: 150px;" class="ms-4 bg-dark">
     <div class="collapse navbar-collapse e" id="navbarTogglerDemo03">
       <ul class="navbar-nav me-auto  mb-lg-0">
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link active ms-2 text-light" href="#">Products</a>
         </li>
@@ -93,11 +93,26 @@
         </form>
          
          <li class="nav-item">
-            <img src='<%= asset_path("user.png") %>' style="width: 30px;" class="ms-4 mt-1">
+          <div class="dropdown">
+            <img src='<%= asset_path("user_3.png") %>' style="width: 30px;" class="ms-4 mt-1 dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+
+              
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <% if user_signed_in? %>
+                <li><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'dropdown-item' %></li>
+
+                <% else %>
+                <li><%= link_to 'Sign in', new_user_session_path, class: 'action-button dropdown-item' %></li>
+                <li><%= link_to 'Sign up', new_user_registration_path, class: 'action-button dropdown-item' %></li>
+                <% end %>
+                
+              </ul>
+            </div>
 
          </li>
          <li class="nav-item">
-            <img src='<%= asset_path("chat-bubble.png") %>' style="width: 30px;" class="ms-4 mt-1">
+            <img src='<%= asset_path("message_1.png") %>' style="width: 30px;" class="ms-4 mt-1">
             
          </li>
           <li class="nav-item">
@@ -105,13 +120,14 @@
             
          </li>
           <li class="nav-item">
-            <img src='<%= asset_path("request.png") %>' style="width: 30px;" class="ms-4 mt-1">
+            <img src='<%= asset_path("question_1.png") %>' style="width: 30px;" class="ms-4 mt-1">
             
          </li>
           <li class="nav-item">
-            <img src='<%= asset_path("stack-exchange.png") %>' style="width: 30px;" class="ms-4 mt-1 bg-warning">
+            <img src='<%= asset_path("stack-exchange.png") %>' style="width: 30px;" class="ms-4 mt-1 bg-secondary rounded">
             
          </li>
+
 
       </ul>
       

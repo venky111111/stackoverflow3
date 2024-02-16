@@ -628,14 +628,17 @@
         .slider.round {border-radius: 34px;}
         .slider.round:before {border-radius: 50%;}
     </style>
+</head>
+<body>
     <div class="d-flex container" style="margin:0 10px 20px;">
-        <p id="text2" style="font-size: 15px;" class="me-2">Annual billing dicount</p>
-
+        <p id="text2" style="font-size: 15px;" class="me-2">Annual billing discount</p>
         <label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round" ></span>
+            <input type="checkbox" id="mySwitch" checked>
+            <span class="slider round"></span>
         </label>
     </div>
+
+    
     <%# four cards container start in 6th component %>
       <div class="container">
         <div class="row row-cols-1 row-cols-md-4 g-2">
@@ -681,7 +684,9 @@
               </div>
               <div class="card-body text-dark text-start">
                 <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom">
-                  <p id="text" style="height:40px;margin: 0 0 6px; font-size:27px;">$6.50 USD</p>
+                  <p  style="height:40px;margin: 0 0 6px; font-size:27px;font-family: 'Roboto Slab';font-weight: bold;" id="price1">$6.50 USD</p>
+                  <p  style="height:40px;margin: 0 0 6px; font-size:27px;display: none;font-family: 'Roboto Slab';font-weight: bold;" id="price2">$7.70 USD</p>
+
                   <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
                 </div>
                  <div class="d-flex">
@@ -728,7 +733,9 @@
               </div>
               <div class="card-body text-dark text-start" style="padding: 15px;">
                 <div style="margin: 0 0 25px;padding: 0 0 24px;height: 90px;" class="border-bottom ">
-                  <p id="text"  style="height:40px;margin: 0 0 6px; font-size:27px;">$13.50 USD</p>
+                  <p id="price3"  style="height:40px;margin: 0 0 6px; font-size:27px;font-family: 'Roboto Slab';font-weight: bold;">$13.50 USD</p>
+                  <p id="price4"  style="height:40px;margin: 0 0 6px; font-size:27px;font-family: 'Roboto Slab';font-weight: bold;display: none;">$15.40 USD</p>
+
                   <p style="color:#a7adb4;font-size:15px" id="text2">per teammate / month</p>
                 </div>
                 <div class="d-flex">
@@ -763,7 +770,7 @@
                   <p class="text2" style="font-size: 15px;"  class="mt-2 border border-dark">Usage and adoption metrics  Collections</p>
                 </div>
                 <div  class="text-center mt-1">
-                    <a href="#" style="height: 43px;margin: 25px 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white">Get started</a>
+                    <a href="#" style="height: 43px;margin: 50px 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white mt-5">Get wdstarted</a>
                 </div>
                   <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
               </div>   
@@ -825,8 +832,43 @@
         </div>
       </div>
       <%# four cards container end in 6th component %>
+      <script>
+         let c1=document.getElementById("price1");
+      let c2=document.getElementById("price2");
+       let c3=document.getElementById("price3");
+      let c4=document.getElementById("price4");
 
-      <%# four cards container start in 6th component %>
+        function onFunction() {
+            console.log('Switch turned ON!');
+              c1.style.display="block";
+              c2.style.display="none";
+              c3.style.display="block";
+              c4.style.display="none";
+        }
+        function offFunction() {
+            console.log('Switch turned OFF!');
+
+            c1.style.display="none";
+            c2.style.display="block";
+            c3.style.display="none";
+            c4.style.display="block";
+
+        }
+
+        // Function to handle toggle events
+        function toggleSwitch() {
+            if (this.checked) {
+                onFunction();
+            } else {
+                offFunction();
+            }
+        }
+
+        // Attaching the toggleSwitch function to the click event of the switch
+        document.getElementById("mySwitch").addEventListener("click", toggleSwitch);
+    </script>
+
+      <%# four cards containers-2 start in 6th component %>
 
 
     <div style="margin-top:100px;width:1200px;" class="container">
@@ -979,7 +1021,6 @@
           var container = document.getElementById('seventh');
           var containerTop = container.getBoundingClientRect().top;
           var currentScrollPos = window.pageYOffset;
-        console.log("containerTop", containerTop, "currentScrollPos", currentScrollPos);
           if (currentScrollPos >=5230 || currentScrollPos<=4700) {
             // Scrolling down
             container.style.display = 'none';
@@ -1257,7 +1298,7 @@
                     <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >Twitter</a> 
                     <a href="" class="text-decoration-none" style="font-size:13px;color:#babfc5" >LinkedIn</a>
                   </ul>
-                  <div style="font-size:12px;color:#babfc5;" class="border mt-5 pt-5">Site design / logo &copy; 2024 Stack Exchange Inc; user contributions licensed under <a href="#" >CC BY-SA.</a><span style="font-size:13px;color:#babfc5;">  rev 2024.2.8.4531</span></div>
+                  <div style="font-size:12px;color:#babfc5;" class="mt-5 pt-5">Site design / logo &copy; 2024 Stack Exchange Inc; user contributions licensed under <a href="#" >CC BY-SA.</a><span style="font-size:13px;color:#babfc5;">  rev 2024.2.8.4531</span></div>
               </div>
           </div>
           
