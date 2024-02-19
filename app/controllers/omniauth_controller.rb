@@ -13,7 +13,6 @@ class OmniauthController < ApplicationController
  
     def google_oauth2
       @user = User.create_from_provider_data(request.env['omniauth.auth'])
-    auth_hash = request.env['omniauth.auth']
 
       if @user.persisted?
         sign_in_and_redirect @user

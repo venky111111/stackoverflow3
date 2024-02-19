@@ -204,7 +204,7 @@
                               <%= image_tag asset_path("up_arr.png"), class: 'img-fluid', alt: 'Like',style: 'width: 45px' %>
                           <% end %>
                           <h2 class="mt-2 mb-2"><%= @post.likes.count %></h2>
-                          <%= link_to like_path(post_id: @post.id), method: :delete, data: { confirm: 'Are you sure?' }  do %>
+<%= link_to like_path(id: @post.id, post_id: @post.id, slug: @post.slug), method: :delete, data: { confirm: 'Are you sure?' }  do %>
                               <%= image_tag asset_path("down_arr.png"), class: 'img-fluid', alt: 'UnLike',style: 'width: 45px' %>
                           <% end %>
                           <%= image_tag asset_path("bookmark.png"), class: 'img-fluid mt-1 mx-auto', alt: 'Bookmark', style: "width:30px" %>
@@ -257,7 +257,7 @@
                   <%= image_tag asset_path("arrow-up.png"), class: 'img-fluid bg-primary rounded-circle p-2 ', alt: 'Like', style: "width:45px" %><br>
                 <% end %>
                 <span class="mt-2 mb-2 fw-bold text-center"><%= comment.likes.count%></span>
-                <%= link_to like_path(postcomment_id: comment.id), method: :delete, class: 'action-button mx-auto' do %>
+<%= link_to like_path(id: comment.id, postcomment_id: comment.id, slug: comment.post.slug), method: :delete, class: 'action-button mx-auto', data: { confirm: 'Are you sure?' } do %>
                   <%= image_tag asset_path("arrow-down.png"), class: 'img-fluid bg-primary rounded-circle p-2 mb-1 ', alt: 'Unlike', style: "width:45px" %><br>
                 <% end %>
                 <%= image_tag asset_path("bookmark.png"), class: 'img-fluid mt-2 mx-auto', alt: 'Like', style: "width:30px" %><br>
@@ -312,10 +312,16 @@
           </div>
         </div>
       <div class="col-md-3" style="margin-top:45px">
+        <div class="d-flex">
             <div> 
               <%= link_to 'Ask Question', new_post_path, class: 'action-button btn mb-4', style: 'background-color:#90c4f9'%> 
               
             </div>
+            <div> 
+              <%= link_to 'Back To Home', posts_path, class: 'action-button btn mb-4 ms-2', style: 'background-color:#90c4f9'%> 
+              
+            </div>
+        </div>
              
             <div style="height: 503px; width: 300px;background-color: #413516;" class="border border-warning  ">
                 <div style="height: 42px; width: 298px;background-color: #6b5724;font-size: 12px;color: #f9fafa" class="align-middle">

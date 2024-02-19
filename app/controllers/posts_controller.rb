@@ -7,7 +7,8 @@ def index
 
   def show
    
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find_by_slug(params[:slug])
+
     @comments = @post.postcomments.includes(:user)
     @comment = Postcomment.new 
   end
@@ -29,6 +30,8 @@ def index
 
   def create
     @post = current_user.post.build(post_params)
+     @post.slug = @post.content.parameterize
+
  
 
     if @post.save

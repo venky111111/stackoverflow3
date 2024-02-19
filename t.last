@@ -1,0 +1,49 @@
+ => 
+[[32m#<Post:0x00007f15a276d8d8[0m
+  id: [34m[1m11[0m,
+  tittle: [31m[1m"[0m[31mSwiper 11 Angular 17 SSR Swiper breakpoints not working[0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mI'm currently facing challenges in integrating breakpoints into the swiper code. Despite my attempts, I have been unable to successfully implement the breakpoints, and it appears that the functionality is not working as expected. I'm reaching out to inquire if anyone else has encountered similar issues or if there are success stories regarding the implementation of breakpoints in this specific code. Any guidance or insights into resolving this matter would be greatly appreciated.[0m[31m[1m"[0m,
+  user_id: [34m[1m26[0m,
+  created_at: Tue, 13 Feb 2024 04:16:39.884057000 UTC +00:00,
+  updated_at: Tue, 13 Feb 2024 04:16:39.884057000 UTC +00:00[32m>[0m,
+ [32m#<Post:0x00007f15a249a7a0[0m
+  id: [34m[1m12[0m,
+  tittle: [31m[1m"[0m[31mWhy am I getting an ActiveRecord Not Found error in a after_commit callback?[0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mso basically I have a sidekiq worker and a Postgresql db. The worker is doing a few different things but to keep things simple it's using an ActiveRecord Transaction. Inside this Transaction is another Transaction that creates a model. The model has an after_commit callback that calls the reload method.[0m[31m[1m"[0m,
+  user_id: [34m[1m26[0m,
+  created_at: Tue, 13 Feb 2024 04:44:21.319108000 UTC +00:00,
+  updated_at: Tue, 13 Feb 2024 04:44:21.319108000 UTC +00:00[32m>[0m,
+ [32m#<Post:0x00007f15a249a660[0m
+  id: [34m[1m13[0m,
+  tittle: [31m[1m"[0m[31mRails 7 - does not disable Turbo on form_for [closed][0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mWhen user click on Revoke Admin instead of hit the controller from the managed_accounts_path (the path is correct) it will go into user_routes.user_path(@user) but with strange PATCH method which leads me to:[0m[31m[1m"[0m,
+  user_id: [34m[1m27[0m,
+  created_at: Tue, 13 Feb 2024 04:45:28.579756000 UTC +00:00,
+  updated_at: Tue, 13 Feb 2024 04:45:28.579756000 UTC +00:00[32m>[0m,
+ [32m#<Post:0x00007f15a249a520[0m
+  id: [34m[1m23[0m,
+  tittle: [31m[1m"[0m[31mJava project with uml [closed][0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mThis is simply a Dependency relation. You need to draw a dashed arrow from Cone to Flavor. This is because Flavor is an enumeration (the Mickeysoft or Eclipse notation you're using is wrong by the way, but you probably can't alter that except by staying away from the tool itself). The enumeration is used for balls to form an array of Flavors.[0m[31m[1m"[0m,
+  user_id: [34m[1m23[0m,
+  created_at: Wed, 14 Feb 2024 04:14:30.260168000 UTC +00:00,
+  updated_at: Wed, 14 Feb 2024 04:14:30.260168000 UTC +00:00[32m>[0m,
+ [32m#<Post:0x00007f15a249a3e0[0m
+  id: [34m[1m24[0m,
+  tittle: [31m[1m"[0m[31mI want to make relation between the post model and User model and likes model Im getting Error check my code once..[0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mI want to performing associations for this tables -> user and post and like the senario is when the user will create their post and like that particular post, but im not fit for this association can you please check my code once and give me some clarity about this \n class Post < ApplicationRecord\n    \n   has_many :postcomments, dependent: :destroy\n  validates :content,:tittle , presence: true\n  has_many :technologies;\n\nend\n[0m[31m[1m"[0m,
+  user_id: [34m[1m24[0m,
+  created_at: Wed, 14 Feb 2024 04:52:59.573422000 UTC +00:00,
+  updated_at: Wed, 14 Feb 2024 05:01:19.099730000 UTC +00:00[32m>[0m,
+ [32m#<Post:0x00007f15a249a2a0[0m
+  id: [34m[1m26[0m,
+  tittle: [31m[1m"[0m[31mLanguage[0m[31m[1m"[0m,
+  content: [31m[1m"[0m[31mWhich language is better for both backend and frontend?[0m[31m[1m"[0m,
+  user_id: [34m[1m23[0m,
+  created_at: Fri, 16 Feb 2024 05:31:50.904374000 UTC +00:00,
+  updated_at: Fri, 16 Feb 2024 05:31:50.904374000 UTC +00:00[32m>[0m,
+ [32m#<Post:0x00007f15a249a160[0m id: [34m[1m29[0m, tittle: [31m[1m"[0m[31mfrrfrf[0m[31m[1m"[0m, content: [31m[1m"[0m[31mrfrfr[0m[31m[1m"[0m, user_id: [34m[1m23[0m, created_at: Mon, 19 Feb 2024 04:24:44.341098000 UTC +00:00, updated_at: Mon, 19 Feb 2024 04:24:44.341098000 UTC +00:00[32m>[0m] 
