@@ -148,11 +148,11 @@
   </nav>
   <%# navbar component on landing page is end %>
   <%# second and third components on landing page is start%>
-  <div class="bg-secondary rounded" style="height:48px;width:70px;position: absolute;margin-left: 180px;"> </div>
+  <div class="bg-secondary rounded" style="height:48px;width:70px;position: absolute;margin-left: 200px;"> </div>
 
    <div class="bg-primary rounded-start" style="height:48px;width:70px;position: absolute;margin-left: 1200px;"> </div>
 
-  <section class="container">
+    <section class="mx-auto" style="width:1500px">
 
     <%# second component on landing page is start %>
     <div class=" m-0 text-center " id="element" style="margin: 0 auto; width: 100%; height: 1000px; background: radial-gradient(110% 20% at bottom, transparent 50%, black 51%); border-radius: 15px 15px 50px 50px;">
@@ -357,7 +357,7 @@
   <div class=" bg-warning rounded-end" style="height: 50px; width: 60px;margin-left:59px ;">
   </div>
   <%# five and sixth conpmanents on landing page is start %>
-<section class="container"> 
+<section class="mx-auto" style="width:1500px"> 
     <div class="row row-cols-1 row-cols-md-3 g-0  mx-auto d-flex " style="width: 70%;">
       <div class="col">
         <div class="card ">
@@ -628,8 +628,7 @@
         .slider.round {border-radius: 34px;}
         .slider.round:before {border-radius: 50%;}
     </style>
-</head>
-<body>
+
     <div class="d-flex container" style="margin:0 10px 20px;">
         <p id="text2" style="font-size: 15px;" class="me-2">Annual billing discount</p>
         <label class="switch">
@@ -640,10 +639,10 @@
 
     
     <%# four cards container start in 6th component %>
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-2">
+      <div class="d-flex justify-content-evenly">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
-            <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+            <div class="card" style="padding: 15px;height: 560px;width: 340px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #e7700d;height: 30px;width: 47px;" class="rounded">Free</h2>
               </div>
@@ -678,7 +677,7 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+             <div class="card" style="padding: 15px;height: 560px;width: 340px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #c8ccd0;height: 30px;width: 55px;" class="rounded text-dark">Basic</h2>
               </div>
@@ -721,9 +720,9 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="height: 595px;width: 310px;margin: -35px 0 0 0;">
+             <div class="card" style="height: 595px;width: 340px;margin: -35px 0 0 0;">
               <div class="card-top">
-                <div style="background-color: #f1f2f3;height: 35px;width: 308px;padding: 0;" class=" border-bottom d-flex justify-content-between">
+                <div style="background-color: #f1f2f3;height: 35px;width: 338px;padding: 0;" class=" border-bottom d-flex justify-content-between">
                   <h6  id="text" class="text-dark m-0 p-2 text-start">RECOMMENDED</h6>
                   <img src='<%= asset_path("dictionary.png") %>'  class="img-fluid m-2" style="width: 18px;height: 18px;"> 
 
@@ -769,15 +768,16 @@
                   </div>
                   <p class="text2" style="font-size: 15px;"  class="mt-2 border border-dark">Usage and adoption metrics  Collections</p>
                 </div>
-                <div  class="text-center mt-1">
-                    <a href="#" style="height: 43px;margin: 50px 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white mt-5">Get wdstarted</a>
+                <div style="margin:80px 0 0" class="text-center">
+                    <a href="#" style="height: 43px;margin: 25pxpx 0 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white">Get wdstarted</a>
                 </div>
+                
                   <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
               </div>   
             </div>
           </div>
           <div class="col">
-             <div class="card" style="padding: 15px;height: 560px;width: 310px;">
+             <div class="card" style="padding: 15px;height: 560px;width: 340px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #2b2d6e;height: 30px;width: 90px;" class="rounded">Enterprise</h2>
               </div>
@@ -822,7 +822,7 @@
                   </div>
                   <p class="text2" style="font-size: 15px;">Robust read and write API</p>
                 </div>
-                <div style="margin:0 0px" class="text-center mt-2">
+                <div style="margin:0 0px" class="text-center mt-3">
                     <a href="#" style="height: 43px;margin: 30px 0 0;padding: 12px 70px;background-color: #2b2d6e;" id="text2" class="fw-bold rounded text-decoration-none text-white">Request a demo</a>
                 </div>
                  <p style="color:#a7adb4;font-size:15px;padding: 12px 0 0 0;" id="text2" class="mb-0 text-center">Always free up to 50 teammates</p>
@@ -1171,7 +1171,7 @@
   <%# tenth component on landing page  is start %>
 <section >
   <%# tenth component on landing page  is start %>
-  <div style="padding: 32px 0 96px;background: radial-gradient(110% 20% at top, transparent 50%, #0c3b6a 51%);" class="container rounded">
+  <div style="padding: 32px 0 96px;width: 1500px;background: radial-gradient(110% 20% at top, transparent 50%, #0c3b6a 51%);" class="rounded mx-auto">
     <div style="" class=" mt-5 mx-auto">
       <div class="row row-cols-1 row-cols-md-3 g-0" style="width:100%">
         <div class="col" style="width: 25%;" id="tenth_side_img">
@@ -1221,15 +1221,11 @@
                      <img src='<%= asset_path("apple-touch-icon-10.png") %>'  class="img-fluid bg-white car rounded" style="height: 64px;width: 64px;margin: 24px;padding: 16px;">
                       <img src='<%= asset_path("apple-touch-icon-11.png") %>'  class="img-fluid bg-white car rounded" style="height: 96px;width: 96px;margin: 24px;padding: 16px;">
                   </div>
-                </div>
-            
+              </div>
         </div>       
       </div>
-      
     </div>
   </div>
-
-  
   <%# tenth component on landing page  is end %>
 </section>
 <section>

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root 'ways#index'
   resources :landingpage
   resources :homepage
-  resources :posts
+
+  resources :posts, param: :slug
  
   resources :likes
 

@@ -242,7 +242,8 @@
                     </div>
                     <div style="font-size:small" class="text-start m-0">
                         <h3 style="font-size: 17px; text-decoration: none;margin: -1.95px 0 5px;padding: 0 24px 0 0;height: 23px;width: 596px;">
-                          <%= link_to post.tittle, post_path(post), class: 'action-button text-decoration-none', style: "color: #d8ebfd" %>
+                          <%= link_to post.tittle, post_path(slug: post.slug), class: 'action-button text-decoration-none', style: "color: #d8ebfd" %>
+
                         </h3>
                         <div class="d-flex justify-content-between mt-4 mb-0">
                           <div class="mt-2">

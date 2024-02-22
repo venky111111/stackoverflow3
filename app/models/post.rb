@@ -5,4 +5,11 @@ class Post < ApplicationRecord
   validates :content,:tittle , presence: true
   has_many :technologies
 
+  extend FriendlyId
+  friendly_id :tittle, use: :slugged
+   def to_param
+        slug
+    end
+      
+
 end
