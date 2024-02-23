@@ -156,9 +156,15 @@
                         <%= form.text_area :content, class: "form-control bg-dark border border-secondary text-white", id: "textArea", rows: 10 %>
                       </div>
                     </div>
+                    <div class="d-flex">
                     <div >
                         <%= form.submit 'Create Post', style:"background-color:#90c4f9;padding: 11px;", class: "rounded btn" %>
                     </div>
+                    <div class="ms-2"> 
+                      <%= link_to 'Back To Home', posts_path, class: 'rounded btn ms-2', style: 'background-color:#90c4f9;padding: 11px;'%> 
+                      
+                    </div>
+                  </div>
                 <% end %>
             </form>
         </div>
