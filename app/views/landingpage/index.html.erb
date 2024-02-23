@@ -39,7 +39,8 @@
         }
         #card_3{
           position: absolute;
-          top: 275%;
+          top:55px;
+
         }
       #cardanim:hover{-ms-transform: scale(1.5); -webkit-transform: scale(1.5);transform: scale(1.5); }
       .animated { transform: scale(1);}
@@ -334,7 +335,7 @@
     </div>
     </div>
   </section>
-<section class="mx-auto" style="width:90vw"> 
+<section class="mx-auto" style="width:90vw; position: relative;"> 
   <div>
   <div class=" bg-danger rounded-start" style="height: 50px; width: 60px;">
   </div>
@@ -344,16 +345,16 @@
   <%# five and sixth conpmanents on landing page is start %>
 
     <div class=" d-flex justify-content-around" >
-        <div class="rounded-0 " style="width:25%;">
-        <img src='<%= asset_path("illo-question.png") %>'  class="img-fluid rounded-0 border">
+        <div class="rounded shadow" style="width:25%;">
+        <img src='<%= asset_path("illo-question.png") %>'  class="img-fluid rounded border">
         </div>
      
-        <div class="" style="width:35%" id="card_3">
-        <img src='<%= asset_path("illo-for-you.png") %>'  class="img-fluid rounded border">    
+        <div class="shadow rounded" style="width:35%" id="card_3">
+        <img src='<%= asset_path("illo-for-you.png") %>'  class="img-fluid rounded-3 border">    
         </div>
 
-        <div class="rounded-0" style="width:25%">
-        <img src='<%= asset_path("illo-home-search.png") %>'   class="img-fluid border">    
+        <div class="rounded shadow" style="width:25%">
+        <img src='<%= asset_path("illo-home-search.png") %>'   class="img-fluid border rounded">    
       </div>
     </div>
   <div class="text-center  mx-auto text-white bg-dark" style="height:2862px;background-color: #0C0D0E;font-size: 13px;padding: 128px 0 96px;border-radius: 20px;">
@@ -621,7 +622,7 @@
       <div class="d-flex justify-content-evenly">
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
-            <div class="card" style="padding: 15px;height: 560px;width: 340px;">
+            <div class="card" style="padding: 15px;height: 560px;width: 320px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #e7700d;height: 30px;width: 47px;" class="rounded">Free</h2>
               </div>
@@ -656,7 +657,7 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="padding: 15px;height: 560px;width: 340px;">
+             <div class="card" style="padding: 15px;height: 560px;width: 320px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #c8ccd0;height: 30px;width: 55px;" class="rounded text-dark">Basic</h2>
               </div>
@@ -699,9 +700,9 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="height: 595px;width: 340px;margin: -35px 0 0 0;">
+             <div class="card" style="height: 595px;width: 320px;margin: -35px 0 0 0;">
               <div class="card-top">
-                <div style="background-color: #f1f2f3;height: 35px;width: 338px;padding: 0;" class=" border-bottom d-flex justify-content-between">
+                <div style="background-color: #f1f2f3;height: 35px;width: 318px;padding: 0;" class=" border-bottom d-flex justify-content-between">
                   <h6  id="text" class="text-dark m-0 p-2 text-start">RECOMMENDED</h6>
                   <img src='<%= asset_path("dictionary.png") %>'  class="img-fluid m-2" style="width: 18px;height: 18px;"> 
 
@@ -747,7 +748,7 @@
                   </div>
                   <p class="text2" style="font-size: 15px;"  class="mt-2 border border-dark">Usage and adoption metrics  Collections</p>
                 </div>
-                <div style="margin:80px 0 0" class="text-center">
+                <div style="margin:50px 0 0" class="text-center">
                     <a href="#" style="height: 43px;margin: 25pxpx 0 0 0;padding: 12px 90px;background-color: #3b4045;" id="text2" class="fw-bold rounded text-decoration-none text-white">Get wdstarted</a>
                 </div>
                 
@@ -756,7 +757,7 @@
             </div>
           </div>
           <div class="col">
-             <div class="card" style="padding: 15px;height: 560px;width: 340px;">
+             <div class="card" style="padding: 15px;height: 560px;width: 320px;">
               <div class="card-top">
                 <h2 id="text2" style="font-size:17px;margin:0 0 17px;padding: 4px 8px;background-color: #2b2d6e;height: 30px;width: 90px;" class="rounded">Enterprise</h2>
               </div>
