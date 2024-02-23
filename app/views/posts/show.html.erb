@@ -233,7 +233,7 @@
                                       <a href="#" style="height: 24px;width: 84px;color:#b2d6fb;background-color: #1c3854;margin: 0 2px 2px 0;padding: 5px 6px; font-size:12px" class="rounded text-decoration-none">No technologies</a>
                                   <% end %>
                               </div>  
-                              <p class="mt-2">Asked
+                              <p class="mt-2" style="font-size:small">Asked
                                   <img src='<%= asset_path("user.png") %>' style="width: 20px;" class="">
                                   <%= @post.user.email.split('@')[0] %>,  <%= @post.created_at.strftime("%A, %d %B %Y") %>
                               </p>
@@ -287,7 +287,7 @@
                             <% end %>
                       </div>  
                       
-                        <p class="mt-2">Answered
+                        <p class="mt-2" style="font-size:small">Answered
                           <img src='<%= asset_path("user_2.png") %>' style="width: 20px;height: 20px;" >
                           <%= comment.user.email.split('@')[0] %>,<%= comment.created_at.strftime("%A, %d %B %Y") %>
                         </p>

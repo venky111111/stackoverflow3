@@ -30,7 +30,7 @@ def index
 
   def create
     @post = current_user.post.build(post_params)
-     @post.slug = @post.content.parameterize
+    @post.slug = @post.tittle.parameterize
 
  
 
